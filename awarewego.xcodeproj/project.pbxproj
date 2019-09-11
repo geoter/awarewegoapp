@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAB723293F4A004D47A2 /* OnboardPage.swift */; };
+		191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAAB823293F4C004D47A2 /* OnboardPage.xib */; };
+		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
+		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
+		191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* globalExtensions.swift */; };
+		193665792316DEA500687530 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193665782316DEA500687530 /* RoundButton.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3723141A1F00FAC645 /* ViewController.swift */; };
 		19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Main.storyboard */; };
@@ -19,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		179954873C54DCF19FE730E8 /* Pods-awarewego.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.debug.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.debug.xcconfig"; sourceTree = "<group>"; };
+		191BAAB723293F4A004D47A2 /* OnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardPage.swift; sourceTree = "<group>"; };
+		191BAAB823293F4C004D47A2 /* OnboardPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardPage.xib; sourceTree = "<group>"; };
+		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
+		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
+		191BAAC223294E7B004D47A2 /* globalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalExtensions.swift; sourceTree = "<group>"; };
+		193665782316DEA500687530 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B13D3523141A1F00FAC645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B13D3723141A1F00FAC645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +56,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191BAAB623293DD3004D47A2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				19D6CD94231665FA000B6DB4 /* WelcomeVC.swift */,
+				191BAAC023293FAD004D47A2 /* OnboardOverlay */,
+				191BAABB23293F56004D47A2 /* OnboardPage */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		191BAABB23293F56004D47A2 /* OnboardPage */ = {
+			isa = PBXGroup;
+			children = (
+				191BAAB723293F4A004D47A2 /* OnboardPage.swift */,
+				191BAAB823293F4C004D47A2 /* OnboardPage.xib */,
+			);
+			path = OnboardPage;
+			sourceTree = "<group>";
+		};
+		191BAAC023293FAD004D47A2 /* OnboardOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */,
+				191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */,
+			);
+			path = OnboardOverlay;
+			sourceTree = "<group>";
+		};
+		191BAAC123294E65004D47A2 /* globalExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				191BAAC223294E7B004D47A2 /* globalExtensions.swift */,
+			);
+			path = globalExtensions;
+			sourceTree = "<group>";
+		};
+		193665732316DC8900687530 /* ReusableUIelements */ = {
+			isa = PBXGroup;
+			children = (
+				193665782316DEA500687530 /* RoundButton.swift */,
+			);
+			path = ReusableUIelements;
+			sourceTree = "<group>";
+		};
 		19B13D2923141A1E00FAC645 = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +121,11 @@
 		19B13D3423141A1F00FAC645 /* awarewego */ = {
 			isa = PBXGroup;
 			children = (
+				191BAAC123294E65004D47A2 /* globalExtensions */,
+				193665732316DC8900687530 /* ReusableUIelements */,
+				191BAAB623293DD3004D47A2 /* Onboarding */,
 				19B13D3523141A1F00FAC645 /* AppDelegate.swift */,
 				19B13D3723141A1F00FAC645 /* ViewController.swift */,
-				19D6CD94231665FA000B6DB4 /* WelcomeVC.swift */,
 				19B13D3923141A1F00FAC645 /* Main.storyboard */,
 				19B13D3C23141A2400FAC645 /* Assets.xcassets */,
 				19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */,
@@ -155,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */,
+				191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */,
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
+				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
 				19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */,
 			);
@@ -210,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
+				193665792316DEA500687530 /* RoundButton.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
 				19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
+				191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */,
+				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

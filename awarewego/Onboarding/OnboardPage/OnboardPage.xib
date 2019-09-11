@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="OnboardPage" customModule="awarewego" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXz-84-wzg" userLabel="BackgroundView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="1" green="0.30782999649999998" blue="0.27937001239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3e-DW-9vK">
+                    <rect key="frame" x="30" y="97.333333333333329" width="354" height="32.666666666666671"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="28"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSM-8Y-Kj1">
+                    <rect key="frame" x="30" y="463.66666666666669" width="354" height="25.666666666666686"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wyg-xx-Bbf">
+                    <rect key="frame" x="41.333333333333343" y="140.00000000000003" width="331.33333333333326" height="313.66666666666674"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Wyg-xx-Bbf" firstAttribute="top" secondItem="j3e-DW-9vK" secondAttribute="bottom" constant="10" id="6Qg-Vz-m0V"/>
+                <constraint firstItem="Wyg-xx-Bbf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Mu-9t-R4n"/>
+                <constraint firstAttribute="bottom" secondItem="YXz-84-wzg" secondAttribute="bottom" id="871-Ug-qJD"/>
+                <constraint firstAttribute="trailing" secondItem="j3e-DW-9vK" secondAttribute="trailing" constant="30" id="K6O-Y2-tqJ"/>
+                <constraint firstAttribute="trailing" secondItem="YXz-84-wzg" secondAttribute="trailing" id="PGm-XO-fbT"/>
+                <constraint firstItem="j3e-DW-9vK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="UC0-kr-pH5"/>
+                <constraint firstAttribute="trailing" secondItem="QSM-8Y-Kj1" secondAttribute="trailing" constant="30" id="VJ7-iq-6DD"/>
+                <constraint firstItem="Wyg-xx-Bbf" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.35" id="hE0-1U-9dj"/>
+                <constraint firstItem="QSM-8Y-Kj1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="jfx-jN-pNj"/>
+                <constraint firstItem="YXz-84-wzg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nAV-Vf-N8b"/>
+                <constraint firstItem="Wyg-xx-Bbf" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="pth-De-f1a"/>
+                <constraint firstItem="QSM-8Y-Kj1" firstAttribute="top" secondItem="Wyg-xx-Bbf" secondAttribute="bottom" constant="10" id="rj9-Sq-g68"/>
+                <constraint firstItem="YXz-84-wzg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vVb-hJ-EaZ"/>
+                <constraint firstItem="Wyg-xx-Bbf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="140" id="vdb-Ra-AbT"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundView" destination="YXz-84-wzg" id="QxD-UZ-u2v"/>
+                <outlet property="image" destination="Wyg-xx-Bbf" id="ZeP-xd-P1s"/>
+                <outlet property="subTitleLabel" destination="QSM-8Y-Kj1" id="CTX-tr-Iy7"/>
+                <outlet property="titleLabel" destination="j3e-DW-9vK" id="KDE-Uh-Olt"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="56.919642857142854"/>
+        </view>
+    </objects>
+</document>
