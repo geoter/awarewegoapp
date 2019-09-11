@@ -12,8 +12,10 @@ import SwiftyOnboard
 struct OnboardPageModel {
     var title: String = ""
     var subtitle: String = ""
+    var textColor: UIColor = UIColor.white
     var image: UIImage = UIImage()
-    var bgColor: UIColor = UIColor.white
+    var bgColor_bottom: UIColor = UIColor.white
+    var bgColor_top: UIColor = UIColor.white
 }
 
 class OnboardPage: SwiftyOnboardPage {
@@ -21,7 +23,8 @@ class OnboardPage: SwiftyOnboardPage {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var subTitleLabel: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var bottom_backgroundView: UIView!
+    @IBOutlet weak var top_backgroundView: UIView!
     
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "OnboardPage", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
@@ -29,8 +32,21 @@ class OnboardPage: SwiftyOnboardPage {
     
     func configure(pageModel:OnboardPageModel) {
         image.image = pageModel.image
-        titleLabel.text = pageModel.title
+        
+        let firstWord = pageModel.title.components(separatedBy: " ").first
+        let restSentence = pageModel.title.components(separatedBy: " ")[1...].joined(separator: " ")
+        
+        let attributedText = NSMutableAttributedString(string: firstWord!, attributes: [NSAttributedString.Key.font: UIFont(name: "Poppins-ExtraBold", size: 24)!])
+        attributedText.append(NSAttributedString(string: " "))
+        attributedText.append(NSAttributedString(string: restSentence, attributes: [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 24)!]))
+        
+        titleLabel.attributedText = attributedText
         subTitleLabel.text = pageModel.subtitle
-        backgroundView.backgroundColor = pageModel.bgColor
+        
+        titleLabel.textColor = pageModel.textColor
+        subTitleLabel.textColor = pageModel.textColor
+        
+        bottom_backgroundView.backgroundColor = pageModel.bgColor_bottom
+        top_backgroundView.backgroundColor = pageModel.bgColor_top
     }
 }

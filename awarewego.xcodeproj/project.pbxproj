@@ -13,6 +13,9 @@
 		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
 		191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* globalExtensions.swift */; };
 		193665792316DEA500687530 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193665782316DEA500687530 /* RoundButton.swift */; };
+		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
+		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
+		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3723141A1F00FAC645 /* ViewController.swift */; };
 		19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
 		191BAAC223294E7B004D47A2 /* globalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalExtensions.swift; sourceTree = "<group>"; };
 		193665782316DEA500687530 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B13D3523141A1F00FAC645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B13D3723141A1F00FAC645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,27 @@
 			path = ReusableUIelements;
 			sourceTree = "<group>";
 		};
+		1937CA9C2329815700641AAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1937CA9D2329817D00641AAC /* Fonts */,
+				19B13D3C23141A2400FAC645 /* Assets.xcassets */,
+				19B13D4123141A2400FAC645 /* Info.plist */,
+				19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1937CA9D2329817D00641AAC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */,
+				1937CA9F232981C800641AAC /* Poppins-Regular.otf */,
+				1937CA9E232981C800641AAC /* Montserrat-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		19B13D2923141A1E00FAC645 = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +154,8 @@
 				19B13D3523141A1F00FAC645 /* AppDelegate.swift */,
 				19B13D3723141A1F00FAC645 /* ViewController.swift */,
 				19B13D3923141A1F00FAC645 /* Main.storyboard */,
-				19B13D3C23141A2400FAC645 /* Assets.xcassets */,
+				1937CA9C2329815700641AAC /* Resources */,
 				19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */,
-				19B13D4123141A2400FAC645 /* Info.plist */,
-				19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */,
 			);
 			path = awarewego;
 			sourceTree = "<group>";
@@ -213,7 +238,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */,
+				1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */,
 				191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */,
+				1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */,
+				1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */,
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
@@ -425,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 996595AM5Y;
-				INFOPLIST_FILE = awarewego/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/awarewego/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 996595AM5Y;
-				INFOPLIST_FILE = awarewego/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/awarewego/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

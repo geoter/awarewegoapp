@@ -15,4 +15,5 @@ pod 'Protobuf', :inhibit_warnings => true
 
 #third party pods
 pod 'SwiftyOnboard'
+pod 'CHIPageControl/Jaloro'
 end
