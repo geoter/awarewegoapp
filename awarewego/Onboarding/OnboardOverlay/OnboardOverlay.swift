@@ -43,12 +43,15 @@ class OnboardOverlay: SwiftyOnboardOverlay {
     }
     
     func configure(loginButtonStyle:OnboardOverlayStyle,signUpButtonStyle:OnboardOverlayStyle,pageControlStyle:OverlayPageControlStyle,logoStyle:LogoStyle = .dark){
-        //Background colors
-        logInButton.backgroundColor = loginButtonStyle.buttonBgColor
-        signUpButton.backgroundColor = signUpButtonStyle.buttonBgColor
-        //Text colors
-        logInButton.setTitleColor(loginButtonStyle.buttonTitleColor, for: .normal)
-        signUpButton.setTitleColor(signUpButtonStyle.buttonTitleColor, for: .normal)
+        
+        UIView.animate(withDuration: 0.3) {
+            //Background colors
+            self.logInButton.backgroundColor = loginButtonStyle.buttonBgColor
+            self.signUpButton.backgroundColor = signUpButtonStyle.buttonBgColor
+            //Text colors
+            self.logInButton.setTitleColor(loginButtonStyle.buttonTitleColor, for: .normal)
+            self.signUpButton.setTitleColor(signUpButtonStyle.buttonTitleColor, for: .normal)
+        }
         
         barsContentControl.tintColor = pageControlStyle.tintColor
         barsContentControl.currentPageTintColor = pageControlStyle.selectedTintColor
