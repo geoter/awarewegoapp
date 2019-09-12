@@ -23,17 +23,33 @@ class WelcomeVC: UIViewController {
         swiftyOnboard.delegate = self
         swiftyOnboard.dataSource = self
         swiftyOnboard.fadePages = true
-        swiftyOnboard.shouldSwipe = false
-        
+        swiftyOnboard.shouldSwipe = true
+        initializeCirculation()
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        cancelCirculation()
+    }
+    
+    func initializeCirculation(){
+        cancelCirculation() //if any previous
         circularTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(circulateSwiftyOnboard), userInfo: nil, repeats: true)
+    }
+    
+    func cancelCirculation(){
+        circularTimer?.invalidate()
     }
     
     @objc func circulateSwiftyOnboard() {
         
-        if (swiftyOnboard.currentPage+1) == swiftyOnboardNumberOfPages(swiftyOnboard){
+        let numberOfPages = swiftyOnboardNumberOfPages(swiftyOnboard)
+        guard numberOfPages > 0 else{return}
+        
+        if (swiftyOnboard.currentPage+1) >= numberOfPages{
             nextAddition = -1
         }
-        else if (swiftyOnboard.currentPage-1) == -1
+        else if (swiftyOnboard.currentPage-1) <= -1
         {
             nextAddition = 1
         }
@@ -133,6 +149,12 @@ extension WelcomeVC: SwiftyOnboardDelegate, SwiftyOnboardDataSource {
         overlay?.logInButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
         overlay?.signUpButton.addTarget(self, action: #selector(registerPressed), for: .touchUpInside)
         return overlay
+    }
+    
+    //called when user swiped pages
+    func swiftyOnboard(_ swiftyOnboard: SwiftyOnboard, currentPage index: Int) {
+        print("now")
+        initializeCirculation()
     }
     
     func swiftyOnboardOverlayForPosition(_ swiftyOnboard: SwiftyOnboard, overlay: SwiftyOnboardOverlay, for position: Double) {
