@@ -12,10 +12,10 @@
 		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
 		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
 		191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* globalExtensions.swift */; };
-		193665792316DEA500687530 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193665782316DEA500687530 /* RoundButton.swift */; };
 		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
+		196A1978232A60B000892711 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A1977232A60B000892711 /* RoundButton.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3723141A1F00FAC645 /* ViewController.swift */; };
 		19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Main.storyboard */; };
@@ -33,10 +33,10 @@
 		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
 		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
 		191BAAC223294E7B004D47A2 /* globalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalExtensions.swift; sourceTree = "<group>"; };
-		193665782316DEA500687530 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
+		196A1977232A60B000892711 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B13D3523141A1F00FAC645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B13D3723141A1F00FAC645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		193665732316DC8900687530 /* ReusableUIelements */ = {
 			isa = PBXGroup;
 			children = (
-				193665782316DEA500687530 /* RoundButton.swift */,
+				196A1977232A60B000892711 /* RoundButton.swift */,
 			);
 			path = ReusableUIelements;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
-				193665792316DEA500687530 /* RoundButton.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
+				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */,
