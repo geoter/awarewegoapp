@@ -19,15 +19,15 @@ class BezierView: UIView {
         drawCurvedBG(frame: self.bounds)
     }
     
-    func drawCurvedBG(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 240, height: 120), resizing: ResizingBehavior = .aspectFill) {
+    func drawCurvedBG(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 241, height: 46), resizing: ResizingBehavior = .aspectFill) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
         //// Resize to Target Frame
         context.saveGState()
-        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 240, height: 120), target: targetFrame)
+        let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 241, height: 46), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
-        context.scaleBy(x: resizedFrame.width / 240, y: resizedFrame.height / 120)
+        context.scaleBy(x: resizedFrame.width / 241, y: resizedFrame.height / 46)
         
         
         //// Color Declarations
@@ -37,11 +37,11 @@ class BezierView: UIView {
         //// Group
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
-        bezierPath.move(to: CGPoint(x: 0, y: 61.49))
-        bezierPath.addCurve(to: CGPoint(x: 51.02, y: 18.28), controlPoint1: CGPoint(x: 0, y: 61.49), controlPoint2: CGPoint(x: 18.37, y: 23.26))
-        bezierPath.addCurve(to: CGPoint(x: 142.87, y: 24.92), controlPoint1: CGPoint(x: 83.68, y: 13.29), controlPoint2: CGPoint(x: 110.21, y: 24.92))
-        bezierPath.addCurve(to: CGPoint(x: 227.13, y: 19.59), controlPoint1: CGPoint(x: 166.19, y: 24.92), controlPoint2: CGPoint(x: 206.18, y: 21.53))
-        bezierPath.addCurve(to: CGPoint(x: 240.83, y: 18.28), controlPoint1: CGPoint(x: 235.5, y: 18.82), controlPoint2: CGPoint(x: 240.83, y: 18.28))
+        bezierPath.move(to: CGPoint(x: 0, y: 44.49))
+        bezierPath.addCurve(to: CGPoint(x: 51.02, y: 1.28), controlPoint1: CGPoint(x: 0, y: 44.49), controlPoint2: CGPoint(x: 18.37, y: 6.26))
+        bezierPath.addCurve(to: CGPoint(x: 142.87, y: 7.92), controlPoint1: CGPoint(x: 83.68, y: -3.71), controlPoint2: CGPoint(x: 110.21, y: 7.92))
+        bezierPath.addCurve(to: CGPoint(x: 227.13, y: 2.59), controlPoint1: CGPoint(x: 166.19, y: 7.92), controlPoint2: CGPoint(x: 206.18, y: 4.53))
+        bezierPath.addCurve(to: CGPoint(x: 240.83, y: 1.28), controlPoint1: CGPoint(x: 235.5, y: 1.82), controlPoint2: CGPoint(x: 240.83, y: 1.28))
         color.setFill()
         bezierPath.fill()
         
@@ -53,11 +53,11 @@ class BezierView: UIView {
         
         //// Bezier 3 Drawing
         let bezier3Path = UIBezierPath()
-        bezier3Path.move(to: CGPoint(x: 0, y: 61))
-        bezier3Path.addLine(to: CGPoint(x: 241, y: 18))
-        bezier3Path.addLine(to: CGPoint(x: 241, y: 120))
-        bezier3Path.addLine(to: CGPoint(x: 0, y: 120))
-        bezier3Path.addLine(to: CGPoint(x: 0, y: 61))
+        bezier3Path.move(to: CGPoint(x: 0, y: 44))
+        bezier3Path.addLine(to: CGPoint(x: 241, y: 1))
+        bezier3Path.addLine(to: CGPoint(x: 241, y: 103))
+        bezier3Path.addLine(to: CGPoint(x: 0, y: 103))
+        bezier3Path.addLine(to: CGPoint(x: 0, y: 44))
         bezier3Path.close()
         color4.setFill()
         bezier3Path.fill()
