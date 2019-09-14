@@ -61,7 +61,7 @@
                                     <segue destination="F6F-pa-9c6" kind="unwind" unwindAction="unwindToWelcomeVC:" id="Lyr-qa-5Gf"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-PD-1st">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-PD-1st" userLabel="Login form stack">
                                 <rect key="frame" x="24" y="138" width="327" height="246"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cg-ER-Mcp" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
@@ -139,15 +139,35 @@
                                         <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BpY-WC-Brh" userLabel="left line">
+                                        <rect key="frame" x="54.5" y="44.5" width="115" height="1"/>
+                                        <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="0.31" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="DDL-wa-3ZV"/>
+                                            <constraint firstAttribute="width" constant="115" id="H5O-Dm-TRN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-Gv-GRC" userLabel="right line">
+                                        <rect key="frame" x="205.5" y="44.5" width="115" height="1"/>
+                                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="0.31" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="GjL-44-QcA"/>
+                                            <constraint firstAttribute="height" constant="1" id="LTJ-me-cal"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="yEg-In-Rxc" firstAttribute="top" secondItem="e3d-OZ-8XI" secondAttribute="top" constant="36" id="8Jh-Ze-Wjr"/>
+                                    <constraint firstItem="yEg-In-Rxc" firstAttribute="leading" secondItem="BpY-WC-Brh" secondAttribute="trailing" constant="10" id="8vJ-3x-RAc"/>
                                     <constraint firstAttribute="height" constant="88" id="9SR-8r-bqG"/>
+                                    <constraint firstItem="OoG-Gv-GRC" firstAttribute="leading" secondItem="yEg-In-Rxc" secondAttribute="trailing" constant="10" id="HPi-T4-v3f"/>
+                                    <constraint firstItem="BpY-WC-Brh" firstAttribute="centerY" secondItem="yEg-In-Rxc" secondAttribute="centerY" id="Rmf-0M-ZDd"/>
                                     <constraint firstItem="yEg-In-Rxc" firstAttribute="centerX" secondItem="e3d-OZ-8XI" secondAttribute="centerX" id="VJk-KX-d3y"/>
+                                    <constraint firstItem="OoG-Gv-GRC" firstAttribute="centerY" secondItem="yEg-In-Rxc" secondAttribute="centerY" id="xJv-uI-XNq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twb-sZ-Pdk">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twb-sZ-Pdk" userLabel="Social logins">
                                 <rect key="frame" x="0.0" y="500" width="375" height="167"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-2I-HSX">
