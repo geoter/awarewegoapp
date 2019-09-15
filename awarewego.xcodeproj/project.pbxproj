@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190EA656232E771800080D58 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EA655232E771800080D58 /* ForgotViewController.swift */; };
+		190EA658232E773600080D58 /* BezierForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EA657232E773600080D58 /* BezierForgotView.swift */; };
 		191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAB723293F4A004D47A2 /* OnboardPage.swift */; };
 		191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAAB823293F4C004D47A2 /* OnboardPage.xib */; };
 		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
@@ -18,7 +20,7 @@
 		1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B790232BB26200DDCA12 /* LoginViewController.swift */; };
 		196A1978232A60B000892711 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A1977232A60B000892711 /* RoundButton.swift */; };
 		196F9788232D3B4500F814EE /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 196F9787232D3B4500F814EE /* Montserrat-Medium.otf */; };
-		196F978B232D3F3A00F814EE /* BezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F978A232D3F3A00F814EE /* BezierView.swift */; };
+		196F978B232D3F3A00F814EE /* BezierLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F978A232D3F3A00F814EE /* BezierLoginView.swift */; };
 		1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985B176232D354C00A10C9D /* RoundTextField.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3723141A1F00FAC645 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		179954873C54DCF19FE730E8 /* Pods-awarewego.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.debug.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.debug.xcconfig"; sourceTree = "<group>"; };
+		190EA655232E771800080D58 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		190EA657232E773600080D58 /* BezierForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierForgotView.swift; sourceTree = "<group>"; };
 		191BAAB723293F4A004D47A2 /* OnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardPage.swift; sourceTree = "<group>"; };
 		191BAAB823293F4C004D47A2 /* OnboardPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardPage.xib; sourceTree = "<group>"; };
 		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
@@ -46,7 +50,7 @@
 		1951B790232BB26200DDCA12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		196A1977232A60B000892711 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		196F9787232D3B4500F814EE /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
-		196F978A232D3F3A00F814EE /* BezierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
+		196F978A232D3F3A00F814EE /* BezierLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierLoginView.swift; sourceTree = "<group>"; };
 		1985B175232D2C7A00A10C9D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		1985B176232D354C00A10C9D /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190EA654232E76ED00080D58 /* Forgot */ = {
+			isa = PBXGroup;
+			children = (
+				190EA655232E771800080D58 /* ForgotViewController.swift */,
+				190EA657232E773600080D58 /* BezierForgotView.swift */,
+			);
+			path = Forgot;
+			sourceTree = "<group>";
+		};
 		191BAAB623293DD3004D47A2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 				191BAAC023293FAD004D47A2 /* OnboardOverlay */,
 				191BAABB23293F56004D47A2 /* OnboardPage */,
 				196F9789232D3F1F00F814EE /* Login */,
+				190EA654232E76ED00080D58 /* Forgot */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -152,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1951B790232BB26200DDCA12 /* LoginViewController.swift */,
-				196F978A232D3F3A00F814EE /* BezierView.swift */,
+				196F978A232D3F3A00F814EE /* BezierLoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -358,16 +372,18 @@
 				19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */,
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
 				19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */,
+				190EA656232E771800080D58 /* ForgotViewController.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
 				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */,
+				190EA658232E773600080D58 /* BezierForgotView.swift in Sources */,
 				1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
-				196F978B232D3F3A00F814EE /* BezierView.swift in Sources */,
+				196F978B232D3F3A00F814EE /* BezierLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

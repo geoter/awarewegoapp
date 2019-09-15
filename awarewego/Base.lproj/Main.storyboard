@@ -127,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="246" id="vR7-X2-2R2"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3d-OZ-8XI" customClass="BezierView" customModule="awarewego" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3d-OZ-8XI" customClass="BezierLoginView" customModule="awarewego" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="412" width="375" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEg-In-Rxc">
@@ -246,15 +246,15 @@
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="-265.81709145427288"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot View Controller-->
         <scene sceneID="TsV-UA-864">
             <objects>
-                <viewController id="RUw-im-P9M" sceneMemberID="viewController">
+                <viewController id="RUw-im-P9M" customClass="ForgotViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lN-a7-b3l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-vZ-Tz2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-vZ-Tz2">
                                 <rect key="frame" x="25" y="77" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Msn-vQ-FeS"/>
@@ -269,47 +269,98 @@
                                     <segue destination="CdF-rV-op7" kind="unwind" unwindAction="unwindToLoginViewController:" id="9jG-mV-OSy"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-hu-Xp7" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="24" y="211" width="327" height="50"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-35-O6g">
+                                <rect key="frame" x="24" y="173" width="327" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-hu-Xp7" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="9p5-sT-bTV"/>
+                                            <constraint firstAttribute="height" constant="50" id="dx3-Ht-Lhd"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="RUw-im-P9M" id="SEx-PQ-GgJ"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-YR-VWT" customClass="RoundButton" customModule="awarewego" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="327" height="50"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BNX-cD-BQc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="O8W-Nw-9Ur"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                        <state key="normal" title="CONTINUE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendForgotRequestPressed:" destination="RUw-im-P9M" eventType="touchUpInside" id="dfL-55-iyH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dx3-Ht-Lhd"/>
+                                    <constraint firstAttribute="height" constant="122" id="IUC-pU-b6x"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="email"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="19"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-YR-VWT" customClass="RoundButton" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="24" y="283" width="327" height="50"/>
-                                <color key="backgroundColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-nA-H3C">
+                                <rect key="frame" x="0.0" y="514" width="375" height="153"/>
+                                <color key="backgroundColor" red="0.15187138319015503" green="0.14705777168273926" blue="0.3708769679069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bW9-Fj-pzj" customClass="BezierForgotView" customModule="awarewego" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="426" width="375" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BNX-cD-BQc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="O8W-Nw-9Ur"/>
+                                    <constraint firstAttribute="height" constant="88" id="HOH-PV-Qbm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="fvl-Er-QXI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
-                                <state key="normal" title="CONTINUE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="19"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle" translatesAutoresizingMaskIntoConstraints="NO" id="k2X-H5-p7w">
+                                <rect key="frame" x="169" y="355" width="37" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="Mgb-7h-v1m"/>
+                                    <constraint firstAttribute="width" constant="37" id="WhX-RK-EEv"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1eB-35-O6g" secondAttribute="bottom" constant="60" id="3Xy-XY-kKG"/>
+                            <constraint firstItem="dpX-nA-H3C" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" id="4r1-zA-YFs"/>
+                            <constraint firstItem="dpX-nA-H3C" firstAttribute="trailing" secondItem="Rit-Ro-j7v" secondAttribute="trailing" id="Fic-aX-wtW"/>
+                            <constraint firstItem="dpX-nA-H3C" firstAttribute="top" secondItem="k2X-H5-p7w" secondAttribute="bottom" constant="65" id="LRC-b1-bco"/>
+                            <constraint firstItem="Rit-Ro-j7v" firstAttribute="trailing" secondItem="1eB-35-O6g" secondAttribute="trailing" constant="24" id="NsN-Y5-SdF"/>
+                            <constraint firstItem="dpX-nA-H3C" firstAttribute="top" secondItem="bW9-Fj-pzj" secondAttribute="bottom" id="O8F-zA-bk4"/>
+                            <constraint firstItem="bW9-Fj-pzj" firstAttribute="trailing" secondItem="Rit-Ro-j7v" secondAttribute="trailing" id="UUW-UE-Cdu"/>
+                            <constraint firstItem="1eB-35-O6g" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" constant="24" id="aN1-qI-ivs"/>
+                            <constraint firstItem="hLl-vZ-Tz2" firstAttribute="top" secondItem="Rit-Ro-j7v" secondAttribute="top" constant="57" id="bce-K5-dee"/>
+                            <constraint firstItem="bW9-Fj-pzj" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" id="dlm-KZ-9IW"/>
+                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" secondItem="1eB-35-O6g" secondAttribute="bottom" priority="250" constant="36" id="hYG-7U-VJA"/>
+                            <constraint firstItem="1eB-35-O6g" firstAttribute="top" secondItem="hLl-vZ-Tz2" secondAttribute="bottom" constant="60" id="huD-ZD-0cb"/>
+                            <constraint firstItem="hLl-vZ-Tz2" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" constant="25" id="nfk-Oh-nz1"/>
+                            <constraint firstAttribute="bottom" secondItem="dpX-nA-H3C" secondAttribute="bottom" id="rtr-6m-MVW"/>
+                            <constraint firstItem="k2X-H5-p7w" firstAttribute="centerX" secondItem="5lN-a7-b3l" secondAttribute="centerX" id="y1l-kh-AjG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rit-Ro-j7v"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Df8-EV-z5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CdF-rV-op7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="-266"/>
+            <point key="canvasLocation" x="2404.3478260869565" y="-267.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c39-Bo-OQA">
@@ -333,5 +384,6 @@
         <image name="FB ICON" width="8.5" height="16"/>
         <image name="GOOGLE ICON" width="19.5" height="12.5"/>
         <image name="back_arrow" width="11" height="21"/>
+        <image name="castle" width="37" height="94"/>
     </resources>
 </document>

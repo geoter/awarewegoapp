@@ -7,11 +7,11 @@ target 'awarewego' do
 
   # Pods for awarewego
   #firebase pods
-pod 'Firebase/Analytics'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
-pod 'Firebase/Functions'
-pod 'Protobuf', :inhibit_warnings => true
+#pod 'Firebase/Analytics'
+#pod 'Firebase/Auth'
+#pod 'Firebase/Firestore'
+#pod 'Firebase/Functions'
+#pod 'Protobuf', :inhibit_warnings => true
 
 #third party pods
 #pod 'SwiftyOnboard'
