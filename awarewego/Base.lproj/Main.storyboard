@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-PD-1st" userLabel="Login form stack">
-                                <rect key="frame" x="24" y="138" width="327" height="246"/>
+                                <rect key="frame" x="24" y="138" width="327" height="266"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cg-ER-Mcp" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -78,6 +78,9 @@
                                                 <real key="value" value="19"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vjJ-GW-DMU" id="zGD-sb-3th"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0t-4Q-oVQ" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="327" height="50"/>
@@ -93,6 +96,9 @@
                                                 <real key="value" value="19"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="vjJ-GW-DMU" id="jhb-87-e65"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4On-Wu-AEP" customClass="RoundButton" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="327" height="50"/>
@@ -111,20 +117,37 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT1-4C-GhX">
-                                        <rect key="frame" x="0.0" y="216" width="327" height="30"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
-                                        <state key="normal" title="Forgot password">
-                                            <color key="titleColor" red="0.74509803921568629" green="0.76078431372549016" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="forgotPasswordPressed:" destination="vjJ-GW-DMU" eventType="touchUpInside" id="4Xd-An-l8k"/>
-                                            <segue destination="RUw-im-P9M" kind="show" id="SQt-dM-M6J"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3m-80-bKk">
+                                        <rect key="frame" x="0.0" y="216" width="327" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT1-4C-GhX">
+                                                <rect key="frame" x="103.5" y="0.0" width="120" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ah8-lU-CD4"/>
+                                                    <constraint firstAttribute="width" constant="120" id="w9f-IT-r3G"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <state key="normal" title="Forgot password">
+                                                    <color key="titleColor" red="0.74509803921568629" green="0.76078431372549016" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="forgotPasswordPressed:" destination="vjJ-GW-DMU" eventType="touchUpInside" id="4Xd-An-l8k"/>
+                                                    <segue destination="RUw-im-P9M" kind="show" id="SQt-dM-M6J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2e3-Sq-gQ7"/>
+                                            <constraint firstItem="MT1-4C-GhX" firstAttribute="centerY" secondItem="h3m-80-bKk" secondAttribute="centerY" id="Pal-Xt-2IX"/>
+                                            <constraint firstItem="MT1-4C-GhX" firstAttribute="centerX" secondItem="h3m-80-bKk" secondAttribute="centerX" id="pEq-IG-woN"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="vR7-X2-2R2"/>
+                                    <constraint firstAttribute="height" constant="266" id="B6B-eE-ZFn"/>
+                                    <constraint firstAttribute="trailing" secondItem="h3m-80-bKk" secondAttribute="trailing" id="GDO-JW-VO2"/>
+                                    <constraint firstItem="h3m-80-bKk" firstAttribute="leading" secondItem="Kuu-PD-1st" secondAttribute="leading" id="bFE-Yq-xUA"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3d-OZ-8XI" customClass="BezierLoginView" customModule="awarewego" customModuleProvider="target">
@@ -224,9 +247,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Twb-sZ-Pdk" secondAttribute="bottom" id="GJj-sb-aV1"/>
-                            <constraint firstItem="Twb-sZ-Pdk" firstAttribute="top" secondItem="e3d-OZ-8XI" secondAttribute="bottom" id="GVN-Az-mvd"/>
+                            <constraint firstItem="Twb-sZ-Pdk" firstAttribute="top" secondItem="e3d-OZ-8XI" secondAttribute="bottom" id="GVN-Az-mvd">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="VCX-QH-yCS" firstAttribute="trailing" secondItem="Kuu-PD-1st" secondAttribute="trailing" constant="24" id="RkK-ht-8fl"/>
                             <constraint firstItem="e3d-OZ-8XI" firstAttribute="trailing" secondItem="VCX-QH-yCS" secondAttribute="trailing" id="XiR-G2-DbG"/>
                             <constraint firstItem="VCX-QH-yCS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fXY-lh-dfe" secondAttribute="trailing" symbolic="YES" id="dQb-Em-Szo"/>
@@ -239,10 +265,23 @@
                             <constraint firstItem="fXY-lh-dfe" firstAttribute="leading" secondItem="mDX-gC-Qs0" secondAttribute="leadingMargin" id="zxM-tW-WDo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VCX-QH-yCS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Koy-xy-veX" appends="YES" id="liX-gT-c2I"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="bezierBottomConstraint" destination="GVN-Az-mvd" id="YLG-2M-Ehs"/>
+                        <outlet property="passwordTxtF" destination="z0t-4Q-oVQ" id="fDa-D3-Cvi"/>
+                        <outlet property="usernameTxtF" destination="3Cg-ER-Mcp" id="DJL-U5-9VF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wg-Df-Xt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F6F-pa-9c6" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Koy-xy-veX">
+                    <connections>
+                        <action selector="emptySpaceTapped:" destination="vjJ-GW-DMU" id="ptq-Zi-UjT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="-265.81709145427288"/>
         </scene>
@@ -255,7 +294,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-vZ-Tz2">
-                                <rect key="frame" x="25" y="77" width="130" height="36"/>
+                                <rect key="frame" x="25" y="52" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Msn-vQ-FeS"/>
                                 </constraints>
@@ -270,9 +309,9 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-35-O6g">
-                                <rect key="frame" x="24" y="173" width="327" height="122"/>
+                                <rect key="frame" x="24" y="148" width="327" height="122"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-hu-Xp7" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-hu-Xp7" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -317,11 +356,11 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-nA-H3C">
-                                <rect key="frame" x="0.0" y="514" width="375" height="153"/>
+                                <rect key="frame" x="0.0" y="489" width="375" height="178"/>
                                 <color key="backgroundColor" red="0.15187138319015503" green="0.14705777168273926" blue="0.3708769679069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bW9-Fj-pzj" customClass="BezierForgotView" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="426" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="401" width="375" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="HOH-PV-Qbm"/>
@@ -329,7 +368,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle" translatesAutoresizingMaskIntoConstraints="NO" id="k2X-H5-p7w">
-                                <rect key="frame" x="169" y="355" width="37" height="94"/>
+                                <rect key="frame" x="169" y="330" width="37" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="Mgb-7h-v1m"/>
                                     <constraint firstAttribute="width" constant="37" id="WhX-RK-EEv"/>
@@ -338,7 +377,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1eB-35-O6g" secondAttribute="bottom" constant="60" id="3Xy-XY-kKG"/>
+                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1eB-35-O6g" secondAttribute="bottom" constant="60" id="3Xy-XY-kKG">
+                                <variation key="heightClass=regular" constant="25"/>
+                            </constraint>
                             <constraint firstItem="dpX-nA-H3C" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" id="4r1-zA-YFs"/>
                             <constraint firstItem="dpX-nA-H3C" firstAttribute="trailing" secondItem="Rit-Ro-j7v" secondAttribute="trailing" id="Fic-aX-wtW"/>
                             <constraint firstItem="dpX-nA-H3C" firstAttribute="top" secondItem="k2X-H5-p7w" secondAttribute="bottom" constant="65" id="LRC-b1-bco"/>
@@ -346,9 +387,9 @@
                             <constraint firstItem="dpX-nA-H3C" firstAttribute="top" secondItem="bW9-Fj-pzj" secondAttribute="bottom" id="O8F-zA-bk4"/>
                             <constraint firstItem="bW9-Fj-pzj" firstAttribute="trailing" secondItem="Rit-Ro-j7v" secondAttribute="trailing" id="UUW-UE-Cdu"/>
                             <constraint firstItem="1eB-35-O6g" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" constant="24" id="aN1-qI-ivs"/>
-                            <constraint firstItem="hLl-vZ-Tz2" firstAttribute="top" secondItem="Rit-Ro-j7v" secondAttribute="top" constant="57" id="bce-K5-dee"/>
+                            <constraint firstItem="hLl-vZ-Tz2" firstAttribute="top" secondItem="Rit-Ro-j7v" secondAttribute="top" constant="32" id="bce-K5-dee"/>
                             <constraint firstItem="bW9-Fj-pzj" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" id="dlm-KZ-9IW"/>
-                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" secondItem="1eB-35-O6g" secondAttribute="bottom" priority="250" constant="36" id="hYG-7U-VJA"/>
+                            <constraint firstItem="k2X-H5-p7w" firstAttribute="top" secondItem="1eB-35-O6g" secondAttribute="bottom" priority="250" constant="60" id="hYG-7U-VJA"/>
                             <constraint firstItem="1eB-35-O6g" firstAttribute="top" secondItem="hLl-vZ-Tz2" secondAttribute="bottom" constant="60" id="huD-ZD-0cb"/>
                             <constraint firstItem="hLl-vZ-Tz2" firstAttribute="leading" secondItem="Rit-Ro-j7v" secondAttribute="leading" constant="25" id="nfk-Oh-nz1"/>
                             <constraint firstAttribute="bottom" secondItem="dpX-nA-H3C" secondAttribute="bottom" id="rtr-6m-MVW"/>
@@ -356,6 +397,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rit-Ro-j7v"/>
                     </view>
+                    <connections>
+                        <outlet property="castleTopConstraint" destination="hYG-7U-VJA" id="R9B-rh-hQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Df8-EV-z5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CdF-rV-op7" userLabel="Exit" sceneMemberID="exit"/>

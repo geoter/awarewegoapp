@@ -10,12 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var bezierBottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var usernameTxtF: RoundTextField!
+    @IBOutlet weak var passwordTxtF: RoundTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if IS_IPHONE_8_7_6 {
+            bezierBottomConstraint.constant = 0 //default: 0
+        }
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func emptySpaceTapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     @IBAction func forgotPasswordPressed(_ sender: Any) {
     }
     
@@ -34,4 +45,15 @@ class LoginViewController: UIViewController {
         // Use data from the view controller which initiated the unwind segue
     }
 
+}
+
+extension LoginViewController:UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTxtF{
+            passwordTxtF.becomeFirstResponder()
+            return false
+        }
+        return true
+    }
 }

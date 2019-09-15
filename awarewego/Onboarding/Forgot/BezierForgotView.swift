@@ -8,7 +8,7 @@
 
 import UIKit
 
-let IS_IPHONE_8_7_6:Bool = (UIScreen.main.bounds.size.height == 667.0)
+
 
 @IBDesignable
 class BezierForgotView: UIView {
@@ -17,7 +17,7 @@ class BezierForgotView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         //// General Declarations
-        
+        //inverted for smaller screens for better appearence
         if IS_IPHONE_8_7_6 {
             drawInvertedCurvedBG(frame: self.bounds)
         }

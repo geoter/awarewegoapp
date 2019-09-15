@@ -13,7 +13,7 @@
 		191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAAB823293F4C004D47A2 /* OnboardPage.xib */; };
 		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
 		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
-		191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* globalExtensions.swift */; };
+		191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* sharedLogic.swift */; };
 		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
@@ -43,7 +43,7 @@
 		191BAAB823293F4C004D47A2 /* OnboardPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardPage.xib; sourceTree = "<group>"; };
 		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
 		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
-		191BAAC223294E7B004D47A2 /* globalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = globalExtensions.swift; sourceTree = "<group>"; };
+		191BAAC223294E7B004D47A2 /* sharedLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedLogic.swift; sourceTree = "<group>"; };
 		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		191BAAC123294E65004D47A2 /* globalExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				191BAAC223294E7B004D47A2 /* globalExtensions.swift */,
+				191BAAC223294E7B004D47A2 /* sharedLogic.swift */,
 			);
 			path = globalExtensions;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				190EA658232E773600080D58 /* BezierForgotView.swift in Sources */,
 				1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
-				191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */,
+				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,

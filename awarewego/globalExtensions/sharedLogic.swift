@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let IS_IPHONE_8_7_6:Bool = (UIScreen.main.bounds.size.height == 667.0)
+public let IS_IPHONE_8_7_6:Bool = (UIScreen.main.bounds.size.height == 667.0)
 
 // used in Bezier Login views
 public enum BezierResizingBehavior: Int {

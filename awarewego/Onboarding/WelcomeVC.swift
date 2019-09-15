@@ -24,6 +24,8 @@ class WelcomeVC: UIViewController {
         swiftyOnboard.fadePages = true
         swiftyOnboard.shouldSwipe = true
         initializeCirculation()
+        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     

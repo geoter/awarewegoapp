@@ -10,10 +10,14 @@ import UIKit
 
 class ForgotViewController: UIViewController {
 
+    @IBOutlet weak var castleTopConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if IS_IPHONE_8_7_6 {
+            castleTopConstraint.constant = 43 //default: 60
+        }
     }
     
     @IBAction func sendForgotRequestPressed(_ sender: Any) {
