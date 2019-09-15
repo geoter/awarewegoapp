@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyOnboard
 
 struct OnboardPageModel {
     var title: String = ""
@@ -24,7 +23,6 @@ class OnboardPage: SwiftyOnboardPage {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var bottom_backgroundView: UIView!
-    @IBOutlet weak var top_backgroundView: UIView!
     
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "OnboardPage", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
@@ -46,7 +44,15 @@ class OnboardPage: SwiftyOnboardPage {
         titleLabel.textColor = pageModel.textColor
         subTitleLabel.textColor = pageModel.textColor
         
-        bottom_backgroundView.backgroundColor = pageModel.bgColor_bottom
-        top_backgroundView.backgroundColor = pageModel.bgColor_top
+        setTopHalfColor(color:pageModel.bgColor_top)
+        setBottomHalfColor(color: pageModel.bgColor_bottom)
+    }
+    
+    private func setTopHalfColor(color:UIColor){
+        self.backgroundColor = color
+    }
+    
+    private func setBottomHalfColor(color:UIColor){
+        bottom_backgroundView.backgroundColor = color
     }
 }

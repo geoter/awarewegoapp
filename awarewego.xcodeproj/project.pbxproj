@@ -26,6 +26,9 @@
 		19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3C23141A2400FAC645 /* Assets.xcassets */; };
 		19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */; };
 		19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */; };
+		19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D31C3F232E3CAC008756C2 /* SwiftyOnboardPage.swift */; };
+		19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D31C40232E3CAC008756C2 /* SwiftyOnboard.swift */; };
+		19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D31C41232E3CAC008756C2 /* SwiftyOnboardOverlay.swift */; };
 		19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D6CD94231665FA000B6DB4 /* WelcomeVC.swift */; };
 		C061B201B1768A2D2F1BD66F /* Pods_awarewego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +57,11 @@
 		19B13D3F23141A2400FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B13D4123141A2400FAC645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19D31C3E232E3CAC008756C2 /* SwiftyOnboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyOnboard.h; sourceTree = "<group>"; };
+		19D31C3F232E3CAC008756C2 /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardPage.swift; sourceTree = "<group>"; };
+		19D31C40232E3CAC008756C2 /* SwiftyOnboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboard.swift; sourceTree = "<group>"; };
+		19D31C41232E3CAC008756C2 /* SwiftyOnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyOnboardOverlay.swift; sourceTree = "<group>"; };
+		19D31C42232E3CAC008756C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D6CD94231665FA000B6DB4 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		24EB94E6B79A05E96F4FE3C5 /* Pods-awarewego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.release.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.release.xcconfig"; sourceTree = "<group>"; };
 		FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awarewego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +163,7 @@
 				19B13D3423141A1F00FAC645 /* awarewego */,
 				19B13D3323141A1F00FAC645 /* Products */,
 				B5E67C3396A7E6BA3C762906 /* Pods */,
+				19D31C47232E41D3008756C2 /* 3rd party */,
 				483D1677673F1B31435D0886 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -180,6 +189,26 @@
 				19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */,
 			);
 			path = awarewego;
+			sourceTree = "<group>";
+		};
+		19D31C3D232E3CAC008756C2 /* SwiftyOnboard */ = {
+			isa = PBXGroup;
+			children = (
+				19D31C3E232E3CAC008756C2 /* SwiftyOnboard.h */,
+				19D31C3F232E3CAC008756C2 /* SwiftyOnboardPage.swift */,
+				19D31C40232E3CAC008756C2 /* SwiftyOnboard.swift */,
+				19D31C41232E3CAC008756C2 /* SwiftyOnboardOverlay.swift */,
+				19D31C42232E3CAC008756C2 /* Info.plist */,
+			);
+			path = SwiftyOnboard;
+			sourceTree = "<group>";
+		};
+		19D31C47232E41D3008756C2 /* 3rd party */ = {
+			isa = PBXGroup;
+			children = (
+				19D31C3D232E3CAC008756C2 /* SwiftyOnboard */,
+			);
+			name = "3rd party";
 			sourceTree = "<group>";
 		};
 		483D1677673F1B31435D0886 /* Frameworks */ = {
@@ -326,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */,
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
+				19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
 				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */,
@@ -334,6 +365,7 @@
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* globalExtensions.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
+				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
 				196F978B232D3F3A00F814EE /* BezierView.swift in Sources */,
 			);

@@ -69,6 +69,7 @@
                     <color key="tintColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="81" id="9mj-uD-NcI"/>
+                        <constraint firstAttribute="height" constant="4" id="aSr-w9-JoN"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
