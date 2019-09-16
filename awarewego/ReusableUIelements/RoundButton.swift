@@ -11,6 +11,21 @@ import UIKit
 @IBDesignable
 class RoundButton: UIButton {
     
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        initializeButtonProperties()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initializeButtonProperties()
+    }
+    
+    func initializeButtonProperties(){
+        self.adjustsImageWhenHighlighted = false
+        self.adjustsImageWhenDisabled = false
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 19{
         didSet{
             self.layer.cornerRadius = cornerRadius
@@ -28,4 +43,34 @@ class RoundButton: UIButton {
             self.layer.borderColor = borderColor.cgColor
         }
     }
+    
+    override open var isHighlighted: Bool {
+        willSet {
+            addHighlightShadow(newValue)
+        }
+    }
+    
+    let kOverlayUniqueTag = 33
+    func addHighlightShadow(_ addOverlay:Bool){
+        
+        for subview:UIView in self.subviews{
+            if(subview.tag == kOverlayUniqueTag){
+                subview.removeFromSuperview()
+            }
+        }
+        
+        if addOverlay {
+            
+            let overlayview:UIView = UIView(frame: self.bounds)
+            overlayview.backgroundColor = UIColor.black
+            overlayview.alpha = 0.2
+            overlayview.layer.cornerRadius = self.layer.cornerRadius
+            overlayview.tag = kOverlayUniqueTag
+            self.insertSubview(overlayview, belowSubview: self.titleLabel!)
+            self.sendSubviewToBack(overlayview)
+        }
+    }
+    
 }
+
+
