@@ -65,6 +65,7 @@ class WelcomeVC: UIViewController {
     }
     
     @objc func registerPressed(_ sender: Any) {
+        performSegue(withIdentifier: "signupScreen", sender: sender)
     }
     
     @IBAction func unwindToWelcomeVC(_ unwindSegue: UIStoryboardSegue) {

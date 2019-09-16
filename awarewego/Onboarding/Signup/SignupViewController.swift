@@ -1,19 +1,20 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  awarewego
 //
-//  Created by awarewego on 13/09/2019.
+//  Created by awarewego on 16/09/2019.
 //  Copyright © 2019 awarewego. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignupViewController: UIViewController {
 
-    @IBOutlet weak var bezierBottomConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var usernameTxtF: RoundTextField!
     @IBOutlet weak var emailTxtF: RoundTextField!
     @IBOutlet weak var passwordTxtF: RoundTextField!
+    
+    @IBOutlet weak var bezierBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +22,20 @@ class LoginViewController: UIViewController {
         if UIDevice().screenType == .iPhoneX_Xs || UIDevice().screenType == .iPhoneXr {
             bezierBottomConstraint.constant = 0 //default: 0
         }
-        
     }
     
     @IBAction func emptySpaceTapped(_ sender: Any) {
         self.view.endEditing(true)
     }
     
-    @IBAction func forgotPasswordPressed(_ sender: Any) {
+    @IBAction func signupPressed(_ sender: Any) {
     }
     
+    @IBAction func facebookLoginPressed(_ sender: Any) {
+    }
+    
+    @IBAction func googleLoginPressed(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
@@ -40,18 +45,17 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func unwindToLoginViewController(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
-    }
 
 }
 
-extension LoginViewController:UITextFieldDelegate{
+extension SignupViewController:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTxtF{
+        if textField == usernameTxtF{
+            emailTxtF.becomeFirstResponder()
+            return false
+        }
+        else if textField == emailTxtF{
             passwordTxtF.becomeFirstResponder()
             return false
         }
