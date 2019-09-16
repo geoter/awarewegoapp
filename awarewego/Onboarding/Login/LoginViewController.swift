@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if IS_IPHONE_8_7_6 {
+        if UIDevice().screenType == .iPhoneX_Xs || UIDevice().screenType == .iPhoneXr {
             bezierBottomConstraint.constant = 0 //default: 0
         }
         // Do any additional setup after loading the view.

@@ -18,7 +18,8 @@ class BezierForgotView: UIView {
     override func draw(_ rect: CGRect) {
         //// General Declarations
         //inverted for smaller screens for better appearence
-        if IS_IPHONE_8_7_6 {
+        
+        if UIDevice().screenType == .iPhone6_7_8{
             drawInvertedCurvedBG(frame: self.bounds)
         }
         else{

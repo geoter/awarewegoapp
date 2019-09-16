@@ -21,6 +21,7 @@ struct OverlayPageControlStyle {
 
 class OnboardOverlay: SwiftyOnboardOverlay {
     
+    @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var barsContentControl: CHIPageControlJaloro!
@@ -35,6 +36,10 @@ class OnboardOverlay: SwiftyOnboardOverlay {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        if UIDevice().screenType == .iPhoneX_Xs || UIDevice().screenType == .iPhoneXr {
+            logoTopConstraint.constant = 78 //default:48
+        }
     }
     
     class func instanceFromNib() -> UIView {

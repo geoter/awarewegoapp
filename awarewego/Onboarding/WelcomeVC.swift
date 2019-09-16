@@ -23,11 +23,13 @@ class WelcomeVC: UIViewController {
         swiftyOnboard.dataSource = self
         swiftyOnboard.fadePages = true
         swiftyOnboard.shouldSwipe = true
-        initializeCirculation()
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        initializeCirculation()
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         cancelCirculation()

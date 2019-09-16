@@ -126,6 +126,7 @@
                 <outlet property="barsContentControl" destination="24g-66-0b0" id="6VC-Ab-EiP"/>
                 <outlet property="logInButton" destination="Sap-Mb-ZJd" id="DYg-xU-zLL"/>
                 <outlet property="logoTitle" destination="Jmf-R4-iph" id="boj-RW-M5D"/>
+                <outlet property="logoTopConstraint" destination="g8u-cl-5hZ" id="UJ0-hw-OCC"/>
                 <outlet property="signUpButton" destination="Tp6-Ai-r5t" id="lCv-ca-1bA"/>
             </connections>
             <point key="canvasLocation" x="498.55072463768118" y="54.910714285714285"/>
