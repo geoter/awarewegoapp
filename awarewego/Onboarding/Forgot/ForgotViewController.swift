@@ -12,10 +12,13 @@ class ForgotViewController: UIViewController {
 
     @IBOutlet weak var castleTopConstraint: NSLayoutConstraint!
     
+    @IBAction func emptySpaceTapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if IS_IPHONE_8_7_6 {
+        if UIDevice().screenType == .iPhone6_7_8{
             castleTopConstraint.constant = 43 //default: 60
         }
     }

@@ -397,6 +397,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="k2X-H5-p7w" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1eB-35-O6g" secondAttribute="bottom" constant="60" id="3Xy-XY-kKG">
                                 <variation key="heightClass=regular" constant="25"/>
@@ -417,6 +418,9 @@
                             <constraint firstItem="k2X-H5-p7w" firstAttribute="centerX" secondItem="5lN-a7-b3l" secondAttribute="centerX" id="y1l-kh-AjG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rit-Ro-j7v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Oez-5W-6mm" appends="YES" id="Zhh-bJ-8yw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="castleTopConstraint" destination="hYG-7U-VJA" id="R9B-rh-hQg"/>
@@ -424,6 +428,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Df8-EV-z5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CdF-rV-op7" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Oez-5W-6mm">
+                    <connections>
+                        <action selector="emptySpaceTapped:" destination="RUw-im-P9M" id="xo7-Hj-eM1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2404.3478260869565" y="-267.1875"/>
         </scene>

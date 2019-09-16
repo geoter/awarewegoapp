@@ -24,7 +24,7 @@
 		1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985B176232D354C00A10C9D /* RoundTextField.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3823141A1F00FAC645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3723141A1F00FAC645 /* ViewController.swift */; };
-		19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Main.storyboard */; };
+		19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Onboarding.storyboard */; };
 		19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3C23141A2400FAC645 /* Assets.xcassets */; };
 		19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */; };
 		19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */; };
@@ -56,7 +56,7 @@
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B13D3523141A1F00FAC645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B13D3723141A1F00FAC645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19B13D3A23141A1F00FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19B13D3A23141A1F00FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		19B13D3C23141A2400FAC645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B13D3F23141A2400FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B13D4123141A2400FAC645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +98,7 @@
 				19D6CD94231665FA000B6DB4 /* WelcomeVC.swift */,
 				191BAAC023293FAD004D47A2 /* OnboardOverlay */,
 				191BAABB23293F56004D47A2 /* OnboardPage */,
+				196DD0E2232FBB4F00C36763 /* Signup */,
 				196F9789232D3F1F00F814EE /* Login */,
 				190EA654232E76ED00080D58 /* Forgot */,
 			);
@@ -162,6 +163,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		196DD0E2232FBB4F00C36763 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
 		196F9789232D3F1F00F814EE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +206,7 @@
 				191BAAB623293DD3004D47A2 /* Onboarding */,
 				19B13D3523141A1F00FAC645 /* AppDelegate.swift */,
 				19B13D3723141A1F00FAC645 /* ViewController.swift */,
-				19B13D3923141A1F00FAC645 /* Main.storyboard */,
+				19B13D3923141A1F00FAC645 /* Onboarding.storyboard */,
 				1937CA9C2329815700641AAC /* Resources */,
 				19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */,
 			);
@@ -316,7 +324,7 @@
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
-				19B13D3B23141A1F00FAC645 /* Main.storyboard in Resources */,
+				19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,12 +398,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19B13D3923141A1F00FAC645 /* Main.storyboard */ = {
+		19B13D3923141A1F00FAC645 /* Onboarding.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				19B13D3A23141A1F00FAC645 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Onboarding.storyboard;
 			sourceTree = "<group>";
 		};
 		19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */ = {
