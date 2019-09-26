@@ -27,8 +27,6 @@ extension UINavigationController {
         if let index = indexToRemove {
             childVCs.remove(at: index)
             self.viewControllers = childVCs
-            vc.view.removeFromSuperview()
-            vc.removeFromParent()
         }
     }
 }

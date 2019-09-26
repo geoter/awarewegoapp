@@ -28,7 +28,7 @@ class LoadingViewController: UIViewController {
         self.playBreathAnimation()
         
         if !isUserAuthenticated(){
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5/* one loop animation duration time*/){
                 self.showWelcome()
             }
         }
