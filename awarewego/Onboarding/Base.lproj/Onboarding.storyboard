@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hr9-V2-m1M">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +19,7 @@
         <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WelcomeVC" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvn-vC-vJ5" customClass="SwiftyOnboard" customModule="awarewego" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -44,11 +42,11 @@
             <objects>
                 <viewController id="a1m-Tw-j1O" customClass="SignupViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="piY-DG-48Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqt-iq-zFB" customClass="BezierLoginView" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="412" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="392" width="375" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNQ-ls-gaX">
                                         <rect key="frame" x="179.5" y="36" width="16" height="18"/>
@@ -89,7 +87,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="4qp-Dr-UqQ" userLabel="Login form stack">
-                                <rect key="frame" x="24" y="118" width="327" height="266"/>
+                                <rect key="frame" x="24" y="98" width="327" height="266"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAq-Sj-KrA" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -97,7 +95,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="m3O-mT-va3"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="nickname"/>
                                         <userDefinedRuntimeAttributes>
@@ -115,7 +112,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="zmC-4e-NeM"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -133,7 +129,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fIj-Jg-0Xc"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
@@ -180,7 +175,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-fQ-hAB">
-                                <rect key="frame" x="16" y="52" width="130" height="36"/>
+                                <rect key="frame" x="16" y="32" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Yyh-YD-g6c"/>
                                 </constraints>
@@ -195,7 +190,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-Yw-oBD" userLabel="Social logins">
-                                <rect key="frame" x="0.0" y="500" width="375" height="167"/>
+                                <rect key="frame" x="0.0" y="480" width="375" height="167"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="XkJ-gI-ir2">
                                         <rect key="frame" x="24" y="0.0" width="327" height="119"/>
@@ -308,11 +303,11 @@
             <objects>
                 <viewController id="vjJ-GW-DMU" customClass="LoginViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mDX-gC-Qs0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-lh-dfe">
-                                <rect key="frame" x="16" y="52" width="130" height="36"/>
+                                <rect key="frame" x="16" y="32" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="sZq-5m-Kah"/>
                                 </constraints>
@@ -327,7 +322,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-PD-1st" userLabel="Login form stack">
-                                <rect key="frame" x="24" y="138" width="327" height="266"/>
+                                <rect key="frame" x="24" y="118" width="327" height="266"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Cg-ER-Mcp" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -335,7 +330,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="T1Y-Gu-vbK"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -353,7 +347,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iaU-j9-sCb"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
@@ -425,7 +418,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3d-OZ-8XI" customClass="BezierLoginView" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="412" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="392" width="375" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEg-In-Rxc">
                                         <rect key="frame" x="179.5" y="36" width="16" height="18"/>
@@ -466,7 +459,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twb-sZ-Pdk" userLabel="Social logins">
-                                <rect key="frame" x="0.0" y="500" width="375" height="167"/>
+                                <rect key="frame" x="0.0" y="480" width="375" height="167"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-2I-HSX">
                                         <rect key="frame" x="24" y="0.0" width="327" height="119"/>
@@ -575,11 +568,11 @@
             <objects>
                 <viewController id="RUw-im-P9M" customClass="ForgotViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lN-a7-b3l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-vZ-Tz2">
-                                <rect key="frame" x="25" y="52" width="130" height="36"/>
+                                <rect key="frame" x="25" y="32" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Msn-vQ-FeS"/>
                                 </constraints>
@@ -594,7 +587,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-35-O6g">
-                                <rect key="frame" x="24" y="148" width="327" height="122"/>
+                                <rect key="frame" x="24" y="128" width="327" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcD-hu-Xp7" customClass="RoundTextField" customModule="awarewego" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -603,7 +596,6 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="9p5-sT-bTV"/>
                                             <constraint firstAttribute="height" constant="50" id="dx3-Ht-Lhd"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -641,11 +633,11 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-nA-H3C">
-                                <rect key="frame" x="0.0" y="489" width="375" height="178"/>
+                                <rect key="frame" x="0.0" y="469" width="375" height="178"/>
                                 <color key="backgroundColor" red="0.15187138319015503" green="0.14705777168273926" blue="0.3708769679069519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bW9-Fj-pzj" customClass="BezierForgotView" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="401" width="375" height="88"/>
+                                <rect key="frame" x="0.0" y="381" width="375" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="HOH-PV-Qbm"/>
@@ -653,7 +645,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle" translatesAutoresizingMaskIntoConstraints="NO" id="k2X-H5-p7w">
-                                <rect key="frame" x="169" y="330" width="37" height="94"/>
+                                <rect key="frame" x="169" y="310" width="37" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="Mgb-7h-v1m"/>
                                     <constraint firstAttribute="width" constant="37" id="WhX-RK-EEv"/>
@@ -699,23 +691,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2404.3478260869565" y="-267.1875"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="c39-Bo-OQA">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Hr9-V2-m1M" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KDg-iG-ggF">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jjR-v0-hlY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mZa-Jz-Qyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140" y="76.011994002998506"/>
         </scene>
     </scenes>
     <resources>

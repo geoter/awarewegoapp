@@ -188,7 +188,7 @@ extension WelcomeVC: SwiftyOnboardDelegate, SwiftyOnboardDataSource {
              "signup":ButtonConfig(titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), backgroundColor: #colorLiteral(red: 0.4039215686, green: 0.3607843137, blue: 0.6549019608, alpha: 1)),
              "pageControl": OverlayPageControlStyle(tintColor: #colorLiteral(red: 0.4039215686, green: 0.3607843137, blue: 0.6549019608, alpha: 1), selectedTintColor: #colorLiteral(red: 0.7882352941, green: 0.7882352941, blue: 0.7882352941, alpha: 1))]]
         
-        var currentColors = colors[currentPage]
+        let currentColors = colors[currentPage]
         let loginColor:ButtonConfig = currentColors["login"] as! ButtonConfig
         let signupColor:ButtonConfig = currentColors["signup"] as! ButtonConfig
         let pageControlColors: OverlayPageControlStyle = currentColors["pageControl"] as! OverlayPageControlStyle

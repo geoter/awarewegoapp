@@ -9,6 +9,30 @@
 import Foundation
 import UIKit
 
+extension UINavigationController {
+    func fadeTo(_ viewController: UIViewController) {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.3
+        transition.type = CATransitionType.fade
+        view.layer.add(transition, forKey: nil)
+        pushViewController(viewController, animated: false)
+    }
+    
+    func removeViewController(_ vc:UIViewController){
+        var childVCs:[UIViewController] = self.viewControllers
+        let indexToRemove = childVCs.firstIndex(where: { (item) -> Bool in
+            item == vc
+        })
+        
+        if let index = indexToRemove {
+            childVCs.remove(at: index)
+            self.viewControllers = childVCs
+            vc.view.removeFromSuperview()
+            vc.removeFromParent()
+        }
+    }
+}
+
 // used in Bezier Login views
 public enum BezierResizingBehavior: Int {
     case aspectFit /// The content is proportionally resized to fit into the target rectangle.

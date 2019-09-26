@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fW-0M-0qB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="4Q0-jS-kub">
+            <objects>
+                <viewController id="Mfc-uG-Pq5" customClass="LoadingViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMa-sr-wpe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="awarewego" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-JY-i1g">
+                                <rect key="frame" x="141" y="465" width="132" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="SCi-8i-FpF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-300" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-8a-kOf">
+                                <rect key="frame" x="155" y="355" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="f2v-oC-1q8"/>
+                                    <constraint firstAttribute="width" secondItem="XjE-8a-kOf" secondAttribute="height" multiplier="1:1" id="f9o-ds-wOl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fAe-JY-i1g" firstAttribute="top" secondItem="XjE-8a-kOf" secondAttribute="bottom" constant="10" id="0fQ-GD-KoW"/>
+                            <constraint firstItem="XjE-8a-kOf" firstAttribute="centerX" secondItem="zMa-sr-wpe" secondAttribute="centerX" constant="-2" id="0qE-zd-0mm"/>
+                            <constraint firstItem="fAe-JY-i1g" firstAttribute="centerX" secondItem="zMa-sr-wpe" secondAttribute="centerX" id="GDe-8q-aKy"/>
+                            <constraint firstItem="fAe-JY-i1g" firstAttribute="centerY" secondItem="zMa-sr-wpe" secondAttribute="centerY" constant="30" id="pJ3-Fq-Wnn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qAm-Zt-Pe4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5fY-lH-8oU"/>
+                    <connections>
+                        <outlet property="logoHeightConstraint" destination="f2v-oC-1q8" id="d7u-on-CBH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atg-pC-krT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39.130434782608695" y="100.44642857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GHv-hj-Ngn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3fW-0M-0qB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M8J-Yj-I43">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mfc-uG-Pq5" kind="relationship" relationship="rootViewController" id="ZBb-E1-s78"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKp-Gp-KJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.01449275362324" y="100.44642857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo-300" width="300" height="300"/>
+    </resources>
+</document>
