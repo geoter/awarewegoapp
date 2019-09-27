@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1904650E233E277D00FA68B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904650D233E277D00FA68B6 /* Extensions.swift */; };
+		19046513233E294600FA68B6 /* MissionsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046512233E294600FA68B6 /* MissionsCollectionVC.swift */; };
+		19046515233E7CED00FA68B6 /* MissionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046514233E7CED00FA68B6 /* MissionCellModel.swift */; };
+		19046517233E7F2400FA68B6 /* MissionsDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */; };
 		190EA656232E771800080D58 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EA655232E771800080D58 /* ForgotViewController.swift */; };
 		190EA658232E773600080D58 /* BezierForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EA657232E773600080D58 /* BezierForgotView.swift */; };
 		191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAB723293F4A004D47A2 /* OnboardPage.swift */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		179954873C54DCF19FE730E8 /* Pods-awarewego.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.debug.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.debug.xcconfig"; sourceTree = "<group>"; };
+		1904650D233E277D00FA68B6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		19046512233E294600FA68B6 /* MissionsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsCollectionVC.swift; sourceTree = "<group>"; };
+		19046514233E7CED00FA68B6 /* MissionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCellModel.swift; sourceTree = "<group>"; };
+		19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsDataLayer.swift; sourceTree = "<group>"; };
 		190EA655232E771800080D58 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		190EA657232E773600080D58 /* BezierForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierForgotView.swift; sourceTree = "<group>"; };
 		191BAAB723293F4A004D47A2 /* OnboardPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardPage.swift; sourceTree = "<group>"; };
@@ -89,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1904650F233E280C00FA68B6 /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				19046512233E294600FA68B6 /* MissionsCollectionVC.swift */,
+				19046514233E7CED00FA68B6 /* MissionCellModel.swift */,
+				19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */,
+			);
+			path = Missions;
+			sourceTree = "<group>";
+		};
 		190EA654232E76ED00080D58 /* Forgot */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +153,7 @@
 			children = (
 				193665732316DC8900687530 /* ReusableUIelements */,
 				191BAAC223294E7B004D47A2 /* sharedLogic.swift */,
+				1904650D233E277D00FA68B6 /* Extensions.swift */,
 			);
 			path = globalClasses;
 			sourceTree = "<group>";
@@ -216,6 +235,7 @@
 				19CF8AE72338D50500BA8450 /* Loading */,
 				191BAAB623293DD3004D47A2 /* Onboarding */,
 				1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */,
+				1904650F233E280C00FA68B6 /* Missions */,
 				191BAAC123294E65004D47A2 /* globalClasses */,
 			);
 			path = awarewego;
@@ -398,6 +418,7 @@
 			files = (
 				19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */,
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
+				19046517233E7F2400FA68B6 /* MissionsDataLayer.swift in Sources */,
 				19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */,
 				19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */,
 				190EA656232E771800080D58 /* ForgotViewController.swift in Sources */,
@@ -408,8 +429,11 @@
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
 				195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
+				19046515233E7CED00FA68B6 /* MissionCellModel.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
+				1904650E233E277D00FA68B6 /* Extensions.swift in Sources */,
+				19046513233E294600FA68B6 /* MissionsCollectionVC.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
 				196F978B232D3F3A00F814EE /* BezierLoginView.swift in Sources */,
 			);
@@ -561,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 996595AM5Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 996595AM5Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

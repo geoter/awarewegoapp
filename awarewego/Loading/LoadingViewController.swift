@@ -28,7 +28,7 @@ class LoadingViewController: UIViewController {
         self.playBreathAnimation()
         
         if !isUserAuthenticated(){
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5/* one loop animation duration time*/){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5/* one loop of  BreathAnimation duration time*/){
                 self.showWelcome()
             }
         }
@@ -45,7 +45,7 @@ class LoadingViewController: UIViewController {
                    self.view.layoutIfNeeded()
                 }) {(completed) in
                     if (self.isViewLoaded && ((self.view?.window) != nil)) {
-                        // viewController is visible
+                        // viewController is visible, prevents from keeping in memory after removing vc from navigation stack
                         self.playBreathAnimation()
                         print("playBreathAnimation")
                     }
