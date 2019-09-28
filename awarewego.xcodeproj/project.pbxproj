@@ -18,6 +18,8 @@
 		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
 		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
 		191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* sharedLogic.swift */; };
+		191F6526234007E800440BD0 /* MissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */; };
+		191F6527234007E800440BD0 /* MissionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */; };
 		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
@@ -55,6 +57,8 @@
 		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
 		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
 		191BAAC223294E7B004D47A2 /* sharedLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedLogic.swift; sourceTree = "<group>"; };
+		191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCollectionViewCell.swift; sourceTree = "<group>"; };
+		191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissionCollectionViewCell.xib; sourceTree = "<group>"; };
 		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				19046512233E294600FA68B6 /* MissionsCollectionVC.swift */,
 				19046514233E7CED00FA68B6 /* MissionCellModel.swift */,
 				19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */,
+				191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */,
+				191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */,
 			);
 			path = Missions;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
 				19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */,
+				191F6527234007E800440BD0 /* MissionCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +437,7 @@
 				195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
 				19046515233E7CED00FA68B6 /* MissionCellModel.swift in Sources */,
+				191F6526234007E800440BD0 /* MissionCollectionViewCell.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				1904650E233E277D00FA68B6 /* Extensions.swift in Sources */,

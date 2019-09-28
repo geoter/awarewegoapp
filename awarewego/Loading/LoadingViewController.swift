@@ -32,6 +32,11 @@ class LoadingViewController: UIViewController {
                 self.showWelcome()
             }
         }
+        else{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5/* one loop of  BreathAnimation duration time*/){
+                self.showMissions()
+            }
+        }
     }
     
     func playBreathAnimation(){
@@ -68,9 +73,15 @@ class LoadingViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeVC")
         self.navigationController!.fadeTo(vc)
     }
+    
+    func showMissions(){
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MissionsCollectionVC")
+        self.navigationController!.fadeTo(vc)
+    }
 
     func isUserAuthenticated() -> Bool{
-        userAuthenticated = false
+        userAuthenticated = true
         return userAuthenticated
     }
     

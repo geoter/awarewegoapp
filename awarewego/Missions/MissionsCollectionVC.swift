@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "MissionCell"
 
 class MissionsCollectionVC: UICollectionViewController {
     
@@ -21,10 +21,7 @@ class MissionsCollectionVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        collectionView.register(UINib(nibName: "MissionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MissionCell")
         configureDataSource()
     }
     
@@ -50,11 +47,12 @@ extension MissionsCollectionVC { //Datasource
         dataSource = UICollectionViewDiffableDataSource
             <Section, MissionCellModel>(collectionView: self.collectionView) {
                 (collectionView: UICollectionView, indexPath: IndexPath,
-                mountain: MissionCellModel) -> UICollectionViewCell? in
+                missionViewModel: MissionCellModel) -> MissionCollectionViewCell? in
             
                 let missionCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: reuseIdentifier, for: indexPath)
-                    
+                withReuseIdentifier: reuseIdentifier, for: indexPath) as! MissionCollectionViewCell
+                missionCell.backgroundColor = UIColor.blue
+                missionCell.configureCell(viewModel: missionViewModel)
                 return missionCell
         }
     }
@@ -77,5 +75,14 @@ extension MissionsCollectionVC { //Delegate
         if let identifier = dataSource.itemIdentifier(for: indexPath){
             print("cell selected:\(identifier)")
         }
+    }
+}
+
+extension MissionsCollectionVC: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        let marginWidth = layout.sectionInset.left + layout.sectionInset.right
+        let cellWidth = collectionView.frame.size.width-marginWidth
+        return CGSize(width: cellWidth, height: collectionView.frame.size.width/0.8)
     }
 }
