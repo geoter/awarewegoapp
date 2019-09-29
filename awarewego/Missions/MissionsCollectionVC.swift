@@ -22,6 +22,7 @@ class MissionsCollectionVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "MissionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MissionCell")
+        collectionView.collectionViewLayout = createLayout()
         configureDataSource()
     }
     
@@ -64,7 +65,7 @@ extension MissionsCollectionVC { //Datasource
         }
         var snapshot = NSDiffableDataSourceSnapshot<Section, MissionCellModel>()
         snapshot.appendSections([.nearby])
-        snapshot.appendItems(missionsMovelViews)
+        snapshot.appendItems(missionsMovelViews,toSection: .nearby)
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
@@ -78,11 +79,22 @@ extension MissionsCollectionVC { //Delegate
     }
 }
 
-extension MissionsCollectionVC: UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        let marginWidth = layout.sectionInset.left + layout.sectionInset.right
-        let cellWidth = collectionView.frame.size.width-marginWidth
-        return CGSize(width: cellWidth, height: collectionView.frame.size.width/0.8)
+extension MissionsCollectionVC{
+    private func createLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                             heightDimension: .fractionalWidth(100/80))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        
+        let groupSize = itemSize
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                         subitems: [item])
+       
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
 }
+
