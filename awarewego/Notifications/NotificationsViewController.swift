@@ -28,9 +28,10 @@ class NotificationsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell2", for: indexPath) as! NotificationCell
+        let identifier = (indexPath.row%2==0) ? "NotificationCell":"NotificationCell2"
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! NotificationCell
         // Configure the cell...
-        cell.descriptionLabel.text = (indexPath.row%2==0) ? "You earned 30 points":"fjkweiwayfiwegfgwigfwegygfygwyegfywegufgwegfuguewqgygfugoqweyugfygqewfygweygfigqwiyiygfiyqwgegifgoiqwegfiwqeifgiygqweiyfgiywqegfgqiweygfyiqwegfiyyqwgeifqw"
+        cell.descriptionLabel.text = (indexPath.row%2 != 0) ? "You earned 30 points":"fjkweiwayfiwegfgwigfwegygfygwyegfywegufgwegfuguewqgygfugoqweyugfygqewfygweygfigqwiyiygfiyqwgegifgoiqwegfiwqeifgiygqweiyfgiywqegfgqiweygfyiqwegfiyyqwgeifqw"
         return cell
     }
     

@@ -24,7 +24,7 @@ class MissionCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = true
     }
     
-    func configureCell(viewModel:MissionCellModel?){
+    func configureCell(viewModel:MissionCellViewModel?){
         if let model = viewModel{
             titleLabel.text = model.title
             descriptionTxt.text = model.description

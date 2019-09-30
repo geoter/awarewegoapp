@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MissionCellModel: Hashable {
+struct MissionCellViewModel: Hashable {
     
     let identifier = UUID()
     let title: String
@@ -22,7 +22,7 @@ struct MissionCellModel: Hashable {
         hasher.combine(identifier)
     }
     
-    static func == (lhs: MissionCellModel, rhs: MissionCellModel) -> Bool {
+    static func == (lhs: MissionCellViewModel, rhs: MissionCellViewModel) -> Bool {
         return lhs.identifier == rhs.identifier
     }
     
