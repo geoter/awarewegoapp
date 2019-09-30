@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1904650E233E277D00FA68B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1904650D233E277D00FA68B6 /* Extensions.swift */; };
-		19046513233E294600FA68B6 /* MissionsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046512233E294600FA68B6 /* MissionsCollectionVC.swift */; };
 		19046515233E7CED00FA68B6 /* MissionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046514233E7CED00FA68B6 /* MissionCellViewModel.swift */; };
 		19046517233E7F2400FA68B6 /* MissionsDataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */; };
 		190EA656232E771800080D58 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EA655232E771800080D58 /* ForgotViewController.swift */; };
@@ -24,6 +23,8 @@
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
 		1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B790232BB26200DDCA12 /* LoginViewController.swift */; };
+		1956B491234213430098E32E /* MissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B490234213430098E32E /* MissionsViewController.swift */; };
+		1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B4932342543D0098E32E /* CustomTabbarController.swift */; };
 		195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C64BB232FFED900681B0B /* SignupViewController.swift */; };
 		196A1978232A60B000892711 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A1977232A60B000892711 /* RoundButton.swift */; };
 		196F9788232D3B4500F814EE /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 196F9787232D3B4500F814EE /* Montserrat-Medium.otf */; };
@@ -33,8 +34,6 @@
 		1971413F23413CF8004CBAEA /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971413E23413CF8004CBAEA /* NotificationCell.swift */; };
 		1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985B176232D354C00A10C9D /* RoundTextField.swift */; };
 		1988B2DB2337AC220025CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */; };
-		19A2BB782341EE8500669D00 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB762341EE8500669D00 /* CollectionViewHeader.swift */; };
-		19A2BB792341EE8500669D00 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A2BB772341EE8500669D00 /* CollectionViewHeader.xib */; };
 		19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */; };
 		19A2BB802341F53F00669D00 /* FilterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
@@ -57,7 +56,6 @@
 /* Begin PBXFileReference section */
 		179954873C54DCF19FE730E8 /* Pods-awarewego.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.debug.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.debug.xcconfig"; sourceTree = "<group>"; };
 		1904650D233E277D00FA68B6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		19046512233E294600FA68B6 /* MissionsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsCollectionVC.swift; sourceTree = "<group>"; };
 		19046514233E7CED00FA68B6 /* MissionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCellViewModel.swift; sourceTree = "<group>"; };
 		19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsDataLayer.swift; sourceTree = "<group>"; };
 		190EA655232E771800080D58 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
 		1951B790232BB26200DDCA12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1956B490234213430098E32E /* MissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewController.swift; sourceTree = "<group>"; };
+		1956B4932342543D0098E32E /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		195C64BB232FFED900681B0B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		196A1977232A60B000892711 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		196F9787232D3B4500F814EE /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
@@ -83,8 +83,6 @@
 		1985B175232D2C7A00A10C9D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		1985B176232D354C00A10C9D /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		19A2BB762341EE8500669D00 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
-		19A2BB772341EE8500669D00 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
 		19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellViewModel.swift; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,15 +123,13 @@
 			isa = PBXGroup;
 			children = (
 				19A2BB7A2341F2FE00669D00 /* Filters */,
-				19046512233E294600FA68B6 /* MissionsCollectionVC.swift */,
+				1956B490234213430098E32E /* MissionsViewController.swift */,
 				19046514233E7CED00FA68B6 /* MissionCellViewModel.swift */,
 				19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */,
 				191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */,
 				191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */,
 				19DC1AD1234111BC00F87ACB /* MissionsCategoryHeader.swift */,
 				19DC1AD2234111BC00F87ACB /* MissionsCategoryHeader.xib */,
-				19A2BB762341EE8500669D00 /* CollectionViewHeader.swift */,
-				19A2BB772341EE8500669D00 /* CollectionViewHeader.xib */,
 			);
 			path = Missions;
 			sourceTree = "<group>";
@@ -223,6 +219,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		1956B492234253FF0098E32E /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1956B4932342543D0098E32E /* CustomTabbarController.swift */,
+				1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */,
+				1904650F233E280C00FA68B6 /* Missions */,
+				1971412F234136CF004CBAEA /* Notifications */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
 		196DD0E2232FBB4F00C36763 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,9 +292,7 @@
 				19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */,
 				19CF8AE72338D50500BA8450 /* Loading */,
 				191BAAB623293DD3004D47A2 /* Onboarding */,
-				1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */,
-				1904650F233E280C00FA68B6 /* Missions */,
-				1971412F234136CF004CBAEA /* Notifications */,
+				1956B492234253FF0098E32E /* Main Screens */,
 				191BAAC123294E65004D47A2 /* globalClasses */,
 			);
 			path = awarewego;
@@ -416,7 +421,6 @@
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
-				19A2BB792341EE8500669D00 /* CollectionViewHeader.xib in Resources */,
 				19DC1AD4234111BC00F87ACB /* MissionsCategoryHeader.xib in Resources */,
 				19DC1AD62341122200F87ACB /* Poppins-Bold.otf in Resources */,
 				19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */,
@@ -480,6 +484,7 @@
 				19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */,
 				190EA656232E771800080D58 /* ForgotViewController.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
+				1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */,
 				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				190EA658232E773600080D58 /* BezierForgotView.swift in Sources */,
 				19DC1AD3234111BC00F87ACB /* MissionsCategoryHeader.swift in Sources */,
@@ -494,10 +499,9 @@
 				1971413F23413CF8004CBAEA /* NotificationCell.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				1971413D23413CD9004CBAEA /* NotificationsViewController.swift in Sources */,
+				1956B491234213430098E32E /* MissionsViewController.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				1904650E233E277D00FA68B6 /* Extensions.swift in Sources */,
-				19A2BB782341EE8500669D00 /* CollectionViewHeader.swift in Sources */,
-				19046513233E294600FA68B6 /* MissionsCollectionVC.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
 				196F978B232D3F3A00F814EE /* BezierLoginView.swift in Sources */,
 			);

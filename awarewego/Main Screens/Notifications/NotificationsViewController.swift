@@ -13,7 +13,12 @@ class NotificationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.init(red: 68/255.0, green: 79/255.0, blue: 99/255.0, alpha: 1.0)]
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

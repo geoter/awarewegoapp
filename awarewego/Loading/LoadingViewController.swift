@@ -20,7 +20,6 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +39,6 @@ class LoadingViewController: UIViewController {
     }
     
     func playBreathAnimation(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.logoHeightConstraint.constant = self.logoHeightConstraint.constant + 10
             UIView.animate(withDuration: 1.0, animations: {
                 self.view.layoutIfNeeded()
@@ -56,7 +54,6 @@ class LoadingViewController: UIViewController {
                     }
                 }
             }
-        }
     }
     
     deinit {

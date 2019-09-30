@@ -29,6 +29,7 @@ class WelcomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         initializeCirculation()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
