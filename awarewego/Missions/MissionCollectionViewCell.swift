@@ -20,7 +20,7 @@ class MissionCollectionViewCell: UICollectionViewCell {
     }
     
     override func draw(_ rect: CGRect) {
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 24
         self.layer.masksToBounds = true
     }
     

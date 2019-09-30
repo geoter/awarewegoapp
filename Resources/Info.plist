@@ -27,6 +27,8 @@
 		<string>Poppins-Regular.otf</string>
 		<string>Poppins-ExtraBold.otf</string>
 		<string>Poppins-SemiBold.otf</string>
+		<string>Poppins-Bold.otf</string>
+		<string>Poppins-Medium.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

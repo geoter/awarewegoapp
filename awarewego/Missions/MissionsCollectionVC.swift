@@ -23,7 +23,10 @@ class MissionsCollectionVC: UICollectionViewController {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "MissionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MissionCell")
         collectionView.collectionViewLayout = createLayout()
+        collectionView.register(UINib(nibName: "MissionsCategoryHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MissionsCategoryHeader.reuseIdentifier)
+        
         configureDataSource()
+        configureHeader()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,17 +87,38 @@ extension MissionsCollectionVC{
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                              heightDimension: .fractionalWidth(100/80))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
         
         let groupSize = itemSize
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                          subitems: [item])
        
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
-
+        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .absolute(32))
+        
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .top)
+        section.boundarySupplementaryItems = [sectionHeader]
+        
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
+    
+    func configureHeader() {
+           dataSource?.supplementaryViewProvider = { (
+               collectionView: UICollectionView,
+               kind: String,
+               indexPath: IndexPath) -> UICollectionReusableView? in
+            
+            if let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MissionsCategoryHeader.reuseIdentifier, for: indexPath) as? MissionsCategoryHeader{
+                header.titleLabel.text = "Nearby"
+                return header
+            }
+               return nil
+           }
+       }
 }
 

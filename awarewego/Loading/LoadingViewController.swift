@@ -76,7 +76,7 @@ class LoadingViewController: UIViewController {
     
     func showMissions(){
         let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MissionsCollectionVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "TabbarVC")
         self.navigationController!.fadeTo(vc)
     }
 
