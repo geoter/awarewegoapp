@@ -34,9 +34,10 @@ class SearchResultsTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 15
     }
 
+    
 //    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionCategoryHeader") as! SectionCategoryHeader
 //
@@ -88,7 +89,11 @@ class SearchResultsTableVC: UITableViewController {
     }
     
 
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("touched")
+        let cell:SearchResultCell = tableView.cellForRow(at: indexPath) as! SearchResultCell
+        cell.resultButton.isSelected = !cell.resultButton.isSelected
+    }
     /*
     // MARK: - Navigation
 

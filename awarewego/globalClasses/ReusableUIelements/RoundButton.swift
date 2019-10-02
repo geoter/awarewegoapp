@@ -13,6 +13,13 @@ class RoundButton: UIButton {
     
     @IBInspectable var overlayColor:UIColor?
     @IBInspectable var titleOverlayColor:UIColor?
+    @IBInspectable var selectedColor:UIColor?
+    @IBInspectable var titleSelectedColor:UIColor? = nil {
+           didSet{
+               self.setTitleColor(oldValue, for: .selected)
+           }
+       }
+    private var bgColor:UIColor!
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -24,9 +31,13 @@ class RoundButton: UIButton {
         initializeButtonProperties()
     }
     
+    
+    
     func initializeButtonProperties(){
         self.adjustsImageWhenHighlighted = false
         self.adjustsImageWhenDisabled = false
+        self.bgColor = self.backgroundColor
+        self.tintColor = UIColor.clear
     }
     
     @IBInspectable var cornerRadius: CGFloat = 19{
@@ -44,6 +55,18 @@ class RoundButton: UIButton {
     @IBInspectable var borderColor: UIColor = UIColor.clear{
         didSet{
             self.layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    override var isSelected: Bool{
+        didSet
+        {
+            if isSelected == true {
+                self.backgroundColor = selectedColor ?? self.backgroundColor
+            }
+            else{
+                self.backgroundColor = bgColor
+            }
         }
     }
     
