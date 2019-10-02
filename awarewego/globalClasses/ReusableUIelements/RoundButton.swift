@@ -11,6 +11,9 @@ import UIKit
 @IBDesignable
 class RoundButton: UIButton {
     
+    @IBInspectable var overlayColor:UIColor?
+    @IBInspectable var titleOverlayColor:UIColor?
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         initializeButtonProperties()
@@ -59,15 +62,18 @@ class RoundButton: UIButton {
             }
         }
         
+        self.setTitleColor(titleColor(for: .normal), for: .highlighted)
+        
         if addOverlay {
-            
             let overlayview:UIView = UIView(frame: self.bounds)
-            overlayview.backgroundColor = UIColor.black
+            overlayview.backgroundColor = overlayColor ?? UIColor.black
             overlayview.alpha = 0.2
             overlayview.layer.cornerRadius = self.layer.cornerRadius
             overlayview.tag = kOverlayUniqueTag
             self.insertSubview(overlayview, belowSubview: self.titleLabel!)
             self.sendSubviewToBack(overlayview)
+            
+            self.setTitleColor(titleOverlayColor, for: .highlighted)
         }
     }
     

@@ -10,16 +10,23 @@ import UIKit
 
 class SearchResultCell: UITableViewCell {
 
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var resultButton: UIButton!
+    
+    var resultText:String = ""{
+        willSet{
+            resultButton.setTitle(newValue, for: .normal)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func draw(_ rect: CGRect) {
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.lightGray.cgColor
+        backView.layer.cornerRadius = 10
+        backView.layer.borderWidth = 1
+        backView.layer.borderColor = #colorLiteral(red: 0.8549019608, green: 0.8549019608, blue: 0.8784313725, alpha: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

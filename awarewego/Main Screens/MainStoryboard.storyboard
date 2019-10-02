@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Bold.otf">
+            <string>Poppins-Bold</string>
+        </array>
         <array key="Poppins-ExtraBold.otf">
             <string>Poppins-ExtraBold</string>
         </array>
@@ -333,37 +336,57 @@
         <scene sceneID="bP5-ni-58d">
             <objects>
                 <tableViewController storyboardIdentifier="SearchResultsTableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A8O-aI-TNc" customClass="SearchResultsTableVC" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="53" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Sb-D5-W4e">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="53" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="50" sectionFooterHeight="18" id="4Sb-D5-W4e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultCell" rowHeight="54" id="xLH-pq-qXV" customClass="SearchResultCell" customModule="awarewego" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.5" width="374" height="54"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchResultCell" rowHeight="73" id="xLH-pq-qXV" customClass="SearchResultCell" customModule="awarewego" customModuleProvider="target">
+                                <rect key="frame" x="20" y="55.5" width="374" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLH-pq-qXV" id="wjI-JQ-F8k">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIU-5X-dUf">
-                                            <rect key="frame" x="20" y="11" width="334" height="32"/>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpI-Pg-h0V">
+                                            <rect key="frame" x="10" y="10" width="354" height="53"/>
+                                            <subviews>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXK-lT-eHW" customClass="RoundButton" customModule="awarewego" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="53"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                                    <state key="normal" title="Paris">
+                                                        <color key="titleColor" red="0.26666666666666666" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="overlayColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="titleOverlayColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="25.5" id="sg9-rT-02R"/>
+                                                <constraint firstAttribute="bottom" secondItem="tXK-lT-eHW" secondAttribute="bottom" id="911-TW-GLY"/>
+                                                <constraint firstAttribute="height" constant="53" id="J5Q-Zy-Aic"/>
+                                                <constraint firstItem="tXK-lT-eHW" firstAttribute="leading" secondItem="hpI-Pg-h0V" secondAttribute="leading" id="i3E-F5-deq"/>
+                                                <constraint firstItem="tXK-lT-eHW" firstAttribute="top" secondItem="hpI-Pg-h0V" secondAttribute="top" id="mNb-rb-tfM"/>
+                                                <constraint firstAttribute="trailing" secondItem="tXK-lT-eHW" secondAttribute="trailing" id="vZq-Tk-Nsf"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="cIU-5X-dUf" secondAttribute="bottom" id="Acs-Dl-5vQ"/>
-                                        <constraint firstItem="cIU-5X-dUf" firstAttribute="top" secondItem="wjI-JQ-F8k" secondAttribute="topMargin" id="wOK-QU-dMl"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cIU-5X-dUf" secondAttribute="trailing" id="xhE-j8-j9q"/>
-                                        <constraint firstItem="cIU-5X-dUf" firstAttribute="leading" secondItem="wjI-JQ-F8k" secondAttribute="leadingMargin" id="yId-UI-cGP"/>
+                                        <constraint firstAttribute="trailing" secondItem="hpI-Pg-h0V" secondAttribute="trailing" constant="10" id="3Az-1c-1J7"/>
+                                        <constraint firstItem="hpI-Pg-h0V" firstAttribute="top" secondItem="wjI-JQ-F8k" secondAttribute="top" constant="10" id="LXZ-Aq-UMq"/>
+                                        <constraint firstAttribute="bottom" secondItem="hpI-Pg-h0V" secondAttribute="bottom" constant="10" id="dKt-WE-IfN"/>
+                                        <constraint firstItem="hpI-Pg-h0V" firstAttribute="leading" secondItem="wjI-JQ-F8k" secondAttribute="leading" constant="10" id="uTK-zD-rtV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="resultLabel" destination="cIU-5X-dUf" id="A1S-IU-XLD"/>
+                                    <outlet property="backView" destination="hpI-Pg-h0V" id="6cw-aA-Z5c"/>
+                                    <outlet property="resultButton" destination="tXK-lT-eHW" id="NZR-GL-L1O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -385,15 +408,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1R-2N-FoX">
-                                <rect key="frame" x="0.0" y="44" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Ideas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-mz-6bp">
+                                <rect key="frame" x="20" y="44" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tJH-YS-rce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="23"/>
+                                <color key="textColor" red="0.2666666667" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="c1R-2N-FoX" firstAttribute="leading" secondItem="Ykr-fV-tZk" secondAttribute="leading" id="ol6-dw-bjB"/>
-                            <constraint firstItem="c1R-2N-FoX" firstAttribute="top" secondItem="Ykr-fV-tZk" secondAttribute="top" id="wuO-DB-xZl"/>
+                            <constraint firstItem="Ykr-fV-tZk" firstAttribute="trailing" secondItem="fNa-mz-6bp" secondAttribute="trailing" id="ZR5-K3-s8r"/>
+                            <constraint firstItem="fNa-mz-6bp" firstAttribute="leading" secondItem="L4E-Cp-Ln0" secondAttribute="leading" constant="20" id="dQ0-4G-xSo"/>
+                            <constraint firstItem="fNa-mz-6bp" firstAttribute="top" secondItem="Ykr-fV-tZk" secondAttribute="top" id="rNQ-YE-1mt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ykr-fV-tZk"/>
                     </view>

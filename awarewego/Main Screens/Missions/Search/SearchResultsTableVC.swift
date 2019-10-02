@@ -37,23 +37,52 @@ class SearchResultsTableVC: UITableViewController {
         return 3
     }
 
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionCategoryHeader") as! SectionCategoryHeader
+//
+//        headerView.titleLabel.text = "Search results"
+//
+//        return headerView
+//    }
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionCategoryHeader") as! SectionCategoryHeader
         
-        headerView.titleLabel.text = "Search ideas"
+        let containerView:UIView = UIView()
         
-        return headerView
+        let bgView:UIView = UIView()
+        bgView.layer.cornerRadius = 10
+        bgView.backgroundColor = #colorLiteral(red: 0.9568627451, green: 0.9568627451, blue: 0.9725490196, alpha: 1)
+        containerView.addSubview(bgView)
+       
+        bgView.translatesAutoresizingMaskIntoConstraints = false
+        bgView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10).isActive = true
+        bgView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
+        bgView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10).isActive = true
+        bgView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10).isActive = true
+        
+        let label:UILabel = UILabel()
+        bgView.addSubview(label)
+        label.text = "Missions in"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Poppins-Medium", size: 18)
+        
+        label.topAnchor.constraint(equalTo: bgView.topAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: bgView.bottomAnchor, constant: 0).isActive = true
+        label.leadingAnchor.constraint(equalTo: bgView.leadingAnchor, constant: 10).isActive = true
+        label.trailingAnchor.constraint(equalTo: bgView.trailingAnchor, constant: -10).isActive = true
+        
+        return containerView
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(SectionCategoryHeader.headerHeight)
+        return 60
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath) as! SearchResultCell
 
-        cell.resultLabel.text = "Paris"
+        cell.resultText = "Paris"
 
         return cell
     }
