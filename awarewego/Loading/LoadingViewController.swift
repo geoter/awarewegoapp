@@ -23,6 +23,7 @@ class LoadingViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         initialTime = Date()
         self.playBreathAnimation()
         

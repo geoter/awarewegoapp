@@ -36,7 +36,7 @@ class NotificationsViewController: UITableViewController {
         let identifier = (indexPath.row%2==0) ? "NotificationCell":"NotificationCell2"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! NotificationCell
         // Configure the cell...
-        cell.descriptionLabel.text = (indexPath.row%2 != 0) ? "You earned 30 points":"fjkweiwayfiwegfgwigfwegygfygwyegfywegufgwegfuguewqgygfugoqweyugfygqewfygweygfigqwiyiygfiyqwgegifgoiqwegfiwqeifgiygqweiyfgiywqegfgqiweygfyiqwegfiyyqwgeifqw"
+        cell.descriptionLabel.text = (indexPath.row%2 != 0) ? "You earned 30 points":"Help Themistocles convince the Athenians"
         return cell
     }
     

@@ -18,9 +18,28 @@ class MissionsViewController: UITableViewController {
      
     fileprivate var dataSource: Datasource!
     
+    lazy var searchResultsVC:SearchResultsTableVC = {
+        return self.storyboard!.instantiateViewController(identifier: "SearchResultsTableVC")
+    }()
+    
+    var searchController:UISearchController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMissionsTableView()
+        
+        let recommendationsVC:SearchRecommendationsVC = self.storyboard!.instantiateViewController(identifier: "SearchRecommendationsVC")
+        searchController = UISearchController(searchResultsController: searchResultsVC)
+        //searchController = UIRecommendSearchController(searchResultsController: searchResultsVC,recommendViewController: recommendationsVC)
+        
+        // Setup the Search Controller
+        searchController.delegate = searchResultsVC
+        searchController.searchResultsUpdater = searchResultsVC
+        searchController.searchBar.placeholder = "Search for a landmark or city"
+        navigationItem.searchController = searchController
+        searchController.obscuresBackgroundDuringPresentation = false
+        //navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,8 +82,8 @@ extension MissionsViewController{
         let nib = UINib(nibName: "MissionTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MissionCell")
         
-        let headerNib = UINib.init(nibName: "MissionsCategoryHeader", bundle: nil)
-        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "MissionsCategoryHeader")
+        let headerNib = UINib.init(nibName: "SectionCategoryHeader", bundle: nil)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "SectionCategoryHeader")
         
         configureDataSource()
     }
@@ -85,7 +104,7 @@ extension MissionsViewController{
 // MARK: - Delegate: missionsTableView
 extension MissionsViewController{
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MissionsCategoryHeader") as! MissionsCategoryHeader
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionCategoryHeader") as! SectionCategoryHeader
         
         headerView.titleLabel.text = "Nearby"
         
@@ -93,7 +112,7 @@ extension MissionsViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(MissionsCategoryHeader.headerHeight)
+        return CGFloat(SectionCategoryHeader.headerHeight)
     }
 }
 
@@ -101,3 +120,4 @@ enum Section: CaseIterable {
      case active
      case nearby
 }
+

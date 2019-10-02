@@ -68,3 +68,37 @@ public extension UIDevice {
     }
     
 }
+
+// MARK: - SearchController useful extensions
+extension UIView {
+    
+    func centerIn(view: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(self)
+        let layoutGuide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            leftAnchor.constraint(equalTo: layoutGuide.leftAnchor),
+            bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor),
+            rightAnchor.constraint(equalTo: layoutGuide.rightAnchor)
+            ])
+    }
+}
+
+extension UIViewController {
+    func add(child: UIViewController) {
+        addChild(child)
+        child.view.centerIn(view: view)
+        child.didMove(toParent: self)
+    }
+
+    func removeFromParent() {
+        guard parent != nil else {
+            return
+        }
+        willMove(toParent: nil)
+        removeFromParent()
+        view.removeFromSuperview()
+    }
+}
+

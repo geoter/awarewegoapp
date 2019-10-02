@@ -1,5 +1,5 @@
 //
-//  MissionsCategoryHeader.swift
+//  SectionCategoryHeader.swift
 //  awarewego
 //
 //  Created by awarewego on 29/09/2019.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MissionsCategoryHeader: UITableViewHeaderFooterView {
+class SectionCategoryHeader: UITableViewHeaderFooterView {
     
     static let headerHeight:Float = 50
     
-    static let reuseIdentifier = "MissionsCategoryHeader"
+    static let reuseIdentifier = "SectionCategoryHeader"
     
     @IBOutlet weak var titleLabel: UILabel!
     
