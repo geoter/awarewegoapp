@@ -16,15 +16,27 @@ class UIRecommendSearchController: UISearchController {
         super.viewDidLoad()
         
         if let recommendVC = recommendationVC{
-            recommendVC.view.alpha = 0
             add(child:recommendVC)
+            recommendVC.view.alpha = 0
             searchBar.delegate = self
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-       if let recommendVC = recommendationVC{
-            showRecommendationVC()
+        super.viewDidAppear(animated)
+        if let recommendVC = recommendationVC{
+          showRecommendationVC(animated: true)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let recommendVC = recommendationVC{
+            hideRecommendationVC(animated: true)
         }
     }
     
@@ -41,10 +53,18 @@ class UIRecommendSearchController: UISearchController {
         recommendationVC = recommendViewController
     }
     
-    private func showRecommendationVC(){
+    private func showRecommendationVC(animated enabled:Bool){
         recommendationVC!.view.isHidden = false
-        UIView.animate(withDuration: 0.5) { [unowned self] in
+        UIView.animate(withDuration: enabled ? 0.2:0.0) {
             self.recommendationVC!.view.alpha = 1
+        }
+    }
+    
+    private func hideRecommendationVC(animated enabled:Bool){
+        UIView.animate(withDuration: enabled ? 0.2:0.0, animations: {
+            self.recommendationVC!.view.alpha = 0
+        }) { (completed) in
+            self.recommendationVC!.view.isHidden = true
         }
     }
     
@@ -63,11 +83,10 @@ extension UIRecommendSearchController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let recommendVC = recommendationVC{
             if searchText.count == 0 {
-                showRecommendationVC()
+                showRecommendationVC(animated: false)
             }
             else{
-                recommendVC.view.isHidden = true
-                recommendVC.view.alpha = 0
+                hideRecommendationVC(animated: false)
             }
         }
     }

@@ -390,7 +390,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c1R-2N-FoX" firstAttribute="leading" secondItem="Ykr-fV-tZk" secondAttribute="leading" id="ol6-dw-bjB"/>
                             <constraint firstItem="c1R-2N-FoX" firstAttribute="top" secondItem="Ykr-fV-tZk" secondAttribute="top" id="wuO-DB-xZl"/>

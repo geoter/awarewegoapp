@@ -29,8 +29,8 @@ class MissionsViewController: UITableViewController {
         configureMissionsTableView()
         
         let recommendationsVC:SearchRecommendationsVC = self.storyboard!.instantiateViewController(identifier: "SearchRecommendationsVC")
-        searchController = UISearchController(searchResultsController: searchResultsVC)
-        //searchController = UIRecommendSearchController(searchResultsController: searchResultsVC,recommendViewController: recommendationsVC)
+        //searchController = UISearchController(searchResultsController: searchResultsVC)
+        searchController = UIRecommendSearchController(searchResultsController: searchResultsVC,recommendViewController: recommendationsVC)
         
         // Setup the Search Controller
         searchController.delegate = searchResultsVC
