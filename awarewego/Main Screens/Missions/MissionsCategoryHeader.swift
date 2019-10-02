@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MissionsCategoryHeader: UICollectionReusableView {
+class MissionsCategoryHeader: UITableViewHeaderFooterView {
+    
+    static let headerHeight:Float = 50
     
     static let reuseIdentifier = "MissionsCategoryHeader"
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

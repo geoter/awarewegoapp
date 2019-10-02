@@ -17,8 +17,6 @@
 		191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */; };
 		191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */; };
 		191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191BAAC223294E7B004D47A2 /* sharedLogic.swift */; };
-		191F6526234007E800440BD0 /* MissionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */; };
-		191F6527234007E800440BD0 /* MissionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */; };
 		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
@@ -33,6 +31,8 @@
 		1971413D23413CD9004CBAEA /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971413C23413CD9004CBAEA /* NotificationsViewController.swift */; };
 		1971413F23413CF8004CBAEA /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971413E23413CF8004CBAEA /* NotificationCell.swift */; };
 		1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1985B176232D354C00A10C9D /* RoundTextField.swift */; };
+		1988878E2344B452008ECC59 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988878C2344B452008ECC59 /* MissionTableViewCell.swift */; };
+		1988878F2344B452008ECC59 /* MissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1988878D2344B452008ECC59 /* MissionTableViewCell.xib */; };
 		1988B2DB2337AC220025CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */; };
 		19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */; };
 		19A2BB802341F53F00669D00 /* FilterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */; };
@@ -65,8 +65,6 @@
 		191BAABC23293FA8004D47A2 /* OnboardOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardOverlay.xib; sourceTree = "<group>"; };
 		191BAABD23293FAA004D47A2 /* OnboardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardOverlay.swift; sourceTree = "<group>"; };
 		191BAAC223294E7B004D47A2 /* sharedLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharedLogic.swift; sourceTree = "<group>"; };
-		191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCollectionViewCell.swift; sourceTree = "<group>"; };
-		191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissionCollectionViewCell.xib; sourceTree = "<group>"; };
 		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -82,6 +80,8 @@
 		1971413E23413CF8004CBAEA /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		1985B175232D2C7A00A10C9D /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		1985B176232D354C00A10C9D /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		1988878C2344B452008ECC59 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
+		1988878D2344B452008ECC59 /* MissionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MissionTableViewCell.xib; sourceTree = "<group>"; };
 		1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
 		19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellViewModel.swift; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 				1956B490234213430098E32E /* MissionsViewController.swift */,
 				19046514233E7CED00FA68B6 /* MissionCellViewModel.swift */,
 				19046516233E7F2400FA68B6 /* MissionsDataLayer.swift */,
-				191F6524234007E800440BD0 /* MissionCollectionViewCell.swift */,
-				191F6525234007E800440BD0 /* MissionCollectionViewCell.xib */,
+				1988878C2344B452008ECC59 /* MissionTableViewCell.swift */,
+				1988878D2344B452008ECC59 /* MissionTableViewCell.xib */,
 				19DC1AD1234111BC00F87ACB /* MissionsCategoryHeader.swift */,
 				19DC1AD2234111BC00F87ACB /* MissionsCategoryHeader.xib */,
 			);
@@ -418,13 +418,13 @@
 				1971413B23413A07004CBAEA /* Poppins-Medium.otf in Resources */,
 				1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */,
 				1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */,
+				1988878F2344B452008ECC59 /* MissionTableViewCell.xib in Resources */,
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
 				19DC1AD4234111BC00F87ACB /* MissionsCategoryHeader.xib in Resources */,
 				19DC1AD62341122200F87ACB /* Poppins-Bold.otf in Resources */,
 				19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */,
-				191F6527234007E800440BD0 /* MissionCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +487,7 @@
 				1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */,
 				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				190EA658232E773600080D58 /* BezierForgotView.swift in Sources */,
+				1988878E2344B452008ECC59 /* MissionTableViewCell.swift in Sources */,
 				19DC1AD3234111BC00F87ACB /* MissionsCategoryHeader.swift in Sources */,
 				1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */,
 				19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */,
@@ -495,7 +496,6 @@
 				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
 				19046515233E7CED00FA68B6 /* MissionCellViewModel.swift in Sources */,
 				19A2BB802341F53F00669D00 /* FilterCellViewModel.swift in Sources */,
-				191F6526234007E800440BD0 /* MissionCollectionViewCell.swift in Sources */,
 				1971413F23413CF8004CBAEA /* NotificationCell.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				1971413D23413CD9004CBAEA /* NotificationsViewController.swift in Sources */,

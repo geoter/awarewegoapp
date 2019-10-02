@@ -1,18 +1,19 @@
 //
-//  MissionCollectionViewCell.swift
+//  MissionTableViewCell.swift
 //  awarewego
 //
-//  Created by awarewego on 29/09/2019.
+//  Created by awarewego on 02/10/2019.
 //  Copyright © 2019 awarewego. All rights reserved.
 //
 
 import UIKit
 
-class MissionCollectionViewCell: UICollectionViewCell {
-
+class MissionTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTxt: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageV: UIImageView!
+    @IBOutlet weak var insetsView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +21,9 @@ class MissionCollectionViewCell: UICollectionViewCell {
     }
     
     override func draw(_ rect: CGRect) {
-        self.layer.cornerRadius = 24
-        self.layer.masksToBounds = true
+        insetsView.layer.cornerRadius = 24
+        insetsView.layer.masksToBounds = true
+        insetsView.backgroundColor = UIColor.blue
     }
     
     func configureCell(viewModel:MissionCellViewModel?){
@@ -30,5 +32,11 @@ class MissionCollectionViewCell: UICollectionViewCell {
             descriptionTxt.text = model.description
         }
     }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
+    }
+    
 }

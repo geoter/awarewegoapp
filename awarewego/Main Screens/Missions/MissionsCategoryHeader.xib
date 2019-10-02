@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eZ-4V-Q3K">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <rect key="frame" x="20" y="0.0" width="300" height="50"/>
                     <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="23"/>
                     <color key="textColor" red="0.26666666666666666" green="0.30980392156862746" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -29,7 +29,7 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="9eZ-4V-Q3K" secondAttribute="bottom" id="CLS-7v-fzA"/>
                 <constraint firstAttribute="trailing" secondItem="9eZ-4V-Q3K" secondAttribute="trailing" id="PP2-ov-WvV"/>
                 <constraint firstItem="9eZ-4V-Q3K" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Pga-Jt-PPN"/>
-                <constraint firstItem="9eZ-4V-Q3K" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="rKg-h3-yKg"/>
+                <constraint firstItem="9eZ-4V-Q3K" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="20" id="rKg-h3-yKg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>

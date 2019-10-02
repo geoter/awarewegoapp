@@ -10,20 +10,17 @@ import UIKit
 
 private let reuseIdentifier = "MissionCell"
 
-class MissionsViewController: UIViewController {
+class MissionsViewController: UITableViewController {
 
-    @IBOutlet weak var missionsCollectionView: UICollectionView!
+    typealias Datasource = UITableViewDiffableDataSource<Section, MissionCellViewModel>
     
-    enum Section: CaseIterable {
-         case active
-         case nearby
-     }
+    @IBOutlet weak var missionsTableView: UITableView!
      
-    fileprivate var dataSource: UICollectionViewDiffableDataSource<Section, MissionCellViewModel>!
+    fileprivate var dataSource: Datasource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureMissionsCollectionView()
+        configureMissionsTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,11 +45,10 @@ class MissionsViewController: UIViewController {
 
 }
 
-// MARK: - Datasource: MissionsCollectionView
+// MARK: - Data source: missionsTableView
 extension MissionsViewController{
     
     func loadMissionsViewModels(){
-        
         let missions:[MissionsDataLayer.Mission] = MissionsDataLayer.getMissions()
         let missionsModelViews = missions.map { (mission) -> MissionCellViewModel in
             return MissionCellViewModel(with: mission)
@@ -63,68 +59,45 @@ extension MissionsViewController{
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
-    func configureMissionsCollectionView(){
-
-        missionsCollectionView.collectionViewLayout = createLayout()
+    func configureMissionsTableView(){
+        let nib = UINib(nibName: "MissionTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "MissionCell")
         
-        missionsCollectionView.register(UINib(nibName: "MissionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MissionCell")
-        missionsCollectionView.register(UINib(nibName: "MissionsCategoryHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MissionsCategoryHeader.reuseIdentifier)
+        let headerNib = UINib.init(nibName: "MissionsCategoryHeader", bundle: nil)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "MissionsCategoryHeader")
         
         configureDataSource()
-        configureHeaders()
     }
     
     func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource
-            <Section, MissionCellViewModel>(collectionView: self.missionsCollectionView) {
-                (collectionView: UICollectionView, indexPath: IndexPath,
-                missionViewModel: MissionCellViewModel) -> MissionCollectionViewCell? in
+        dataSource = Datasource(tableView: self.missionsTableView) {
+                (tableView: UITableView, indexPath: IndexPath,
+                missionViewModel: MissionCellViewModel) -> MissionTableViewCell? in
             
-                let missionCell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: reuseIdentifier, for: indexPath) as! MissionCollectionViewCell
-                missionCell.backgroundColor = UIColor.blue
+                let missionCell = tableView.dequeueReusableCell(
+                    withIdentifier: reuseIdentifier, for: indexPath) as! MissionTableViewCell
                 missionCell.configureCell(viewModel: missionViewModel)
                 return missionCell
         }
     }
-    
-    private func configureHeaders() {
-             dataSource?.supplementaryViewProvider = { (
-                 collectionView: UICollectionView,
-                 kind: String,
-                 indexPath: IndexPath) -> UICollectionReusableView? in
-              
-              if let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: MissionsCategoryHeader.reuseIdentifier, for: indexPath) as? MissionsCategoryHeader{
-                  header.titleLabel.text = "Nearby"
-                  return header
-              }
-                 return nil
-             }
-    }
-    
-    private func createLayout() -> UICollectionViewLayout {
-               let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                    heightDimension: .fractionalWidth(100/80))
-               let item = NSCollectionLayoutItem(layoutSize: itemSize)
-               item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
-               
-               let groupSize = itemSize
-               let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                                subitems: [item])
-              
-               let section = NSCollectionLayoutSection(group: group)
-               section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)
-               
-               let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .absolute(32))
-               
-               let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                   layoutSize: headerSize,
-                   elementKind:  UICollectionView.elementKindSectionHeader, alignment: .top)
-               section.boundarySupplementaryItems = [sectionHeader]
-               
-               let layout = UICollectionViewCompositionalLayout(section: section)
-               return layout
-           }
-        
 }
 
+// MARK: - Delegate: missionsTableView
+extension MissionsViewController{
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MissionsCategoryHeader") as! MissionsCategoryHeader
+        
+        headerView.titleLabel.text = "Nearby"
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(MissionsCategoryHeader.headerHeight)
+    }
+}
+
+enum Section: CaseIterable {
+     case active
+     case nearby
+}
