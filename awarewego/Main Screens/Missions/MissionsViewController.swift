@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "MissionCell"
 
-class MissionsViewController: UITableViewController {
+class MissionsViewController: UITableViewController{
 
     typealias Datasource = UITableViewDiffableDataSource<Section, MissionCellViewModel>
     
@@ -37,7 +37,7 @@ class MissionsViewController: UITableViewController {
         searchController.searchResultsUpdater = searchResultsVC
         searchController.searchBar.placeholder = "Search for a landmark or city"
         navigationItem.searchController = searchController
-        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = true
         //navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
@@ -52,15 +52,12 @@ class MissionsViewController: UITableViewController {
         loadMissionsViewModels()
     }
     
-    /*
-
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destination
+        if let filtersScrollVC = destination as? FiltersScrollVC {
+          filtersScrollVC.delegate = self
+        }
     }
-    */
 
 }
 
@@ -119,5 +116,11 @@ extension MissionsViewController{
 enum Section: CaseIterable {
      case active
      case nearby
+}
+
+extension MissionsViewController:FiltersScrollDelegate{
+    func showFilters() {
+        self.performSegue(withIdentifier: "showFilters", sender: nil)
+    }
 }
 

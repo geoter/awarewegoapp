@@ -304,7 +304,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <connections>
-                                <segue destination="8Hh-uu-k39" kind="embed" id="MKK-be-gRq"/>
+                                <segue destination="8Hh-uu-k39" kind="embed" identifier="filtersScrollVC" id="MKK-be-gRq"/>
                             </connections>
                         </containerView>
                         <connections>
@@ -315,6 +315,7 @@
                     <navigationItem key="navigationItem" title="Missions" id="3if-So-zcf"/>
                     <connections>
                         <outlet property="missionsTableView" destination="L9q-4p-RT8" id="oSk-z8-fPb"/>
+                        <segue destination="xcX-T3-l32" kind="presentation" identifier="showFilters" id="Wi0-7D-fia"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="liq-Iy-w2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -623,7 +624,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qoj-Uz-W0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="298"/>
+            <point key="canvasLocation" x="1484" y="322"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="VTN-cP-hzf">
+            <objects>
+                <viewController id="xcX-T3-l32" customClass="FiltersViewController" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aS2-fx-yuH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="E1A-qM-d79"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hq-nK-Kaf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="1407"/>
         </scene>
     </scenes>
     <resources>

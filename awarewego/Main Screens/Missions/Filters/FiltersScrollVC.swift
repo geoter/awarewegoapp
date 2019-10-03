@@ -8,18 +8,23 @@
 
 import UIKit
 
+protocol FiltersScrollDelegate {
+    func showFilters()
+}
+
 class FiltersScrollVC: UIViewController {
 
+    public var delegate:FiltersScrollDelegate?
+    
     var filterTags:[String] = []
     
     @IBOutlet weak var collectionV: UICollectionView!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-
         filterTags.append(contentsOf: ["Filters","Nearby","<3km","Free"])
         self.collectionV.reloadData()
     }
-    
 
     /*
     // MARK: - Navigation
@@ -30,16 +35,14 @@ class FiltersScrollVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
 extension FiltersScrollVC: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//        if let delegateClass = self.delegate {
-//            delegateClass.recommendationSelected(with: recommendedTags[indexPath.item])
-//        }
-        
+        if let delegateClass = self.delegate {
+            delegateClass.showFilters()
+        }
     }
 }
 
