@@ -283,9 +283,9 @@
 		19A2BB7A2341F2FE00669D00 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				19AB0D2523461C500041FD3A /* FiltersScrollVC.swift */,
 				19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */,
 				19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */,
-				19AB0D2523461C500041FD3A /* FiltersScrollVC.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";

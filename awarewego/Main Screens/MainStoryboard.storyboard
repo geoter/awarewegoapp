@@ -458,7 +458,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.73889014573946388" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="mI8-HT-Wbd" secondAttribute="bottom" constant="5" id="3TA-ZI-KFD"/>
                                                         <constraint firstAttribute="trailing" secondItem="mI8-HT-Wbd" secondAttribute="trailing" constant="15" id="IKO-vZ-f7r"/>
@@ -515,15 +515,59 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pv4-io-abP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="p4x-ya-Kie">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="8" id="p4x-ya-Kie">
                                     <size key="itemSize" width="106" height="34"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="40" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="IconCell" id="rvE-mb-R18">
+                                        <rect key="frame" x="20" y="7.5" width="111" height="35.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2sT-9q-8im">
+                                            <rect key="frame" x="0.0" y="0.0" width="111" height="35.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="33" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdw-FW-9sd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="111" height="35.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider.horizontal.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-Q8-UIk">
+                                                            <rect key="frame" x="10" y="12.5" width="14" height="10.5"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14" id="L1U-Pw-WRS"/>
+                                                                <constraint firstAttribute="width" constant="14" id="bMA-FN-uRO"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Athens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edz-Ak-RmZ">
+                                                            <rect key="frame" x="29" y="5" width="64" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="edz-Ak-RmZ" secondAttribute="trailing" constant="18" id="9la-eL-t2P"/>
+                                                        <constraint firstItem="edz-Ak-RmZ" firstAttribute="top" secondItem="Fdw-FW-9sd" secondAttribute="top" constant="5" id="Fwv-cR-dEy"/>
+                                                        <constraint firstItem="edz-Ak-RmZ" firstAttribute="leading" secondItem="XyE-Q8-UIk" secondAttribute="trailing" constant="5" id="Gcv-xm-SaN"/>
+                                                        <constraint firstItem="XyE-Q8-UIk" firstAttribute="centerY" secondItem="Fdw-FW-9sd" secondAttribute="centerY" id="Jzg-Yu-e5o"/>
+                                                        <constraint firstItem="XyE-Q8-UIk" firstAttribute="leading" secondItem="Fdw-FW-9sd" secondAttribute="leading" constant="10" id="Ryq-BA-7xU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="edz-Ak-RmZ" secondAttribute="bottom" constant="5" id="pgj-LA-ymQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Fdw-FW-9sd" secondAttribute="trailing" id="3Xm-l3-nAi"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fdw-FW-9sd" secondAttribute="bottom" id="QDl-cj-AtR"/>
+                                                <constraint firstItem="Fdw-FW-9sd" firstAttribute="top" secondItem="2sT-9q-8im" secondAttribute="top" id="aZm-LY-4yQ"/>
+                                                <constraint firstItem="Fdw-FW-9sd" firstAttribute="leading" secondItem="2sT-9q-8im" secondAttribute="leading" id="is4-ye-vov"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagCell" id="wmF-nr-4Ak">
-                                        <rect key="frame" x="20" y="7" width="100" height="36"/>
+                                        <rect key="frame" x="139" y="7" width="100" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jaG-eL-6rt">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="36"/>
@@ -539,7 +583,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="0.86130136986301364" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Fa2-Pe-aTi" secondAttribute="trailing" constant="18" id="KAc-W5-s5k"/>
                                                         <constraint firstAttribute="bottom" secondItem="Fa2-Pe-aTi" secondAttribute="bottom" constant="5" id="fZs-1J-JbT"/>
@@ -587,6 +631,7 @@
         <image name="coin-icon" width="42" height="42"/>
         <image name="parthenon" width="560" height="560"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="slider.horizontal.3" catalog="system" width="64" height="50"/>
         <image name="square.grid.2x2.fill" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>

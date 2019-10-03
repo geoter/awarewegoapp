@@ -49,7 +49,9 @@ extension FiltersScrollVC: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TagCell", for: indexPath)
+        
+        let identifier = indexPath.item == 0 ? "IconCell":"TagCell"
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier:identifier, for: indexPath)
         let label:UILabel = cell.viewWithTag(22) as! UILabel
         label.text = filterTags[indexPath.item]
         
@@ -57,6 +59,4 @@ extension FiltersScrollVC: UICollectionViewDataSource{
         roundView.layer.cornerRadius = 16
         return cell
     }
-    
-    
 }
