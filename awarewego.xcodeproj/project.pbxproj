@@ -41,6 +41,7 @@
 		19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */; };
 		19A2BB802341F53F00669D00 /* FilterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */; };
 		19AB0D24234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB0D23234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift */; };
+		19AB0D2623461C500041FD3A /* FiltersScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB0D2523461C500041FD3A /* FiltersScrollVC.swift */; };
 		19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B13D3523141A1F00FAC645 /* AppDelegate.swift */; };
 		19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3923141A1F00FAC645 /* Onboarding.storyboard */; };
 		19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3C23141A2400FAC645 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
 		19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellViewModel.swift; sourceTree = "<group>"; };
 		19AB0D23234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGCollectionViewLeftAlignFlowLayout.swift; sourceTree = "<group>"; };
+		19AB0D2523461C500041FD3A /* FiltersScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersScrollVC.swift; sourceTree = "<group>"; };
 		19B13D3223141A1F00FAC645 /* awarewego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awarewego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B13D3523141A1F00FAC645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B13D3A23141A1F00FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */,
 				19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */,
+				19AB0D2523461C500041FD3A /* FiltersScrollVC.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				198887982344F8C6008ECC59 /* SearchRecommendationsVC.swift in Sources */,
 				19AB0D24234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift in Sources */,
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
+				19AB0D2623461C500041FD3A /* FiltersScrollVC.swift in Sources */,
 				19046517233E7F2400FA68B6 /* MissionsDataLayer.swift in Sources */,
 				19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */,
 				19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */,
