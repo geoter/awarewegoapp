@@ -10,7 +10,7 @@ import UIKit
 
 class UIRecommendSearchController: UISearchController {
 
-    private var recommendationVC:UIViewController?
+    private var recommendationVC:SearchRecommendationsVC?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +48,10 @@ class UIRecommendSearchController: UISearchController {
         super.init(searchResultsController: searchResultsController)
     }
     
-    convenience init(searchResultsController: UIViewController?, recommendViewController:UIViewController) {
+    convenience init(searchResultsController: UIViewController?, recommendViewController:SearchRecommendationsVC) {
         self.init(searchResultsController: searchResultsController)
         recommendationVC = recommendViewController
+        recommendationVC?.delegate = self
     }
     
     private func showRecommendationVC(animated enabled:Bool){
@@ -89,5 +90,11 @@ extension UIRecommendSearchController: UISearchBarDelegate{
                 hideRecommendationVC(animated: false)
             }
         }
+    }
+}
+
+extension UIRecommendSearchController: SearchRecommendationsDelegate{
+    func recommendationSelected(with selection: Any) {
+        print("selected \(selection)")
     }
 }

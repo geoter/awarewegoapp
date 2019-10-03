@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol SearchRecommendationsDelegate {
+    func recommendationSelected(with selection:Any)
+}
+
 class SearchRecommendationsVC: UIViewController {
 
+    public var delegate:SearchRecommendationsDelegate?
+    
     @IBOutlet weak var collectionV: UICollectionView!
     
     var recommendedTags:[String] = []
@@ -36,7 +42,11 @@ class SearchRecommendationsVC: UIViewController {
 
 extension SearchRecommendationsVC: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selected \(recommendedTags[indexPath.item])")
+        
+        if let delegateClass = self.delegate {
+            delegateClass.recommendationSelected(with: recommendedTags[indexPath.item])
+        }
+        
     }
 }
 
