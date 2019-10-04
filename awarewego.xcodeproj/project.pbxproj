@@ -38,6 +38,9 @@
 		198887982344F8C6008ECC59 /* SearchRecommendationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198887972344F8C6008ECC59 /* SearchRecommendationsVC.swift */; };
 		1988879A2344FD63008ECC59 /* UIRecommendSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198887992344FD63008ECC59 /* UIRecommendSearchController.swift */; };
 		1988B2DB2337AC220025CDB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */; };
+		198DF0432347C63C006BDA4C /* RangeSeekSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198DF0402347C63C006BDA4C /* RangeSeekSliderDelegate.swift */; };
+		198DF0442347C63C006BDA4C /* RangeSeekSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198DF0412347C63C006BDA4C /* RangeSeekSlider.swift */; };
+		198DF0452347C63C006BDA4C /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198DF0422347C63C006BDA4C /* TapticEngine.swift */; };
 		199008E823466A990015277E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199008E723466A990015277E /* FiltersViewController.swift */; };
 		19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */; };
 		19A2BB802341F53F00669D00 /* FilterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */; };
@@ -94,6 +97,9 @@
 		198887972344F8C6008ECC59 /* SearchRecommendationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecommendationsVC.swift; sourceTree = "<group>"; };
 		198887992344FD63008ECC59 /* UIRecommendSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRecommendSearchController.swift; sourceTree = "<group>"; };
 		1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		198DF0402347C63C006BDA4C /* RangeSeekSliderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSliderDelegate.swift; sourceTree = "<group>"; };
+		198DF0412347C63C006BDA4C /* RangeSeekSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSeekSlider.swift; sourceTree = "<group>"; };
+		198DF0422347C63C006BDA4C /* TapticEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		199008E723466A990015277E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
 		19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +288,16 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		198DF03F2347C63C006BDA4C /* RangeSeekSlider */ = {
+			isa = PBXGroup;
+			children = (
+				198DF0402347C63C006BDA4C /* RangeSeekSliderDelegate.swift */,
+				198DF0412347C63C006BDA4C /* RangeSeekSlider.swift */,
+				198DF0422347C63C006BDA4C /* TapticEngine.swift */,
+			);
+			path = RangeSeekSlider;
+			sourceTree = "<group>";
+		};
 		19A2BB7A2341F2FE00669D00 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +366,7 @@
 		19D31C47232E41D3008756C2 /* 3rd party */ = {
 			isa = PBXGroup;
 			children = (
+				198DF03F2347C63C006BDA4C /* RangeSeekSlider */,
 				19AB0D23234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift */,
 				19D31C3D232E3CAC008756C2 /* SwiftyOnboard */,
 			);
@@ -507,6 +524,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */,
+				198DF0432347C63C006BDA4C /* RangeSeekSliderDelegate.swift in Sources */,
+				198DF0452347C63C006BDA4C /* TapticEngine.swift in Sources */,
 				198887982344F8C6008ECC59 /* SearchRecommendationsVC.swift in Sources */,
 				19AB0D24234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift in Sources */,
 				191BAAB923293F4C004D47A2 /* OnboardPage.swift in Sources */,
@@ -537,6 +556,7 @@
 				1956B491234213430098E32E /* MissionsViewController.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				1904650E233E277D00FA68B6 /* Extensions.swift in Sources */,
+				198DF0442347C63C006BDA4C /* RangeSeekSlider.swift in Sources */,
 				191BAABF23293FAA004D47A2 /* OnboardOverlay.swift in Sources */,
 				198887932344EBD7008ECC59 /* SearchResultsTableVC.swift in Sources */,
 				196F978B232D3F3A00F814EE /* BezierLoginView.swift in Sources */,

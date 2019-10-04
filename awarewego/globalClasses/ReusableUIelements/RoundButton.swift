@@ -31,8 +31,6 @@ class RoundButton: UIButton {
         initializeButtonProperties()
     }
     
-    
-    
     func initializeButtonProperties(){
         self.adjustsImageWhenHighlighted = false
         self.adjustsImageWhenDisabled = false
