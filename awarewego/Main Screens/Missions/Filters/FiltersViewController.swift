@@ -9,10 +9,19 @@
 import UIKit
 
 class FiltersViewController: UIViewController {
+   
+    @IBOutlet weak var durationSlider: RangeSeekSlider!
+    @IBOutlet weak var distanceSlider: RangeSeekSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        durationSlider.delegate = self
+        distanceSlider.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     /*
@@ -25,5 +34,17 @@ class FiltersViewController: UIViewController {
     }
     */
 
+}
+
+extension FiltersViewController:RangeSeekSliderDelegate{
+    func didStartTouches(in slider: RangeSeekSlider){
+        print("disable")
+        self.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = false
+    }
+    
+    func didEndTouches(in slider: RangeSeekSlider){
+        print("enable")
+        self.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = true
+    }
 }
 
