@@ -60,6 +60,7 @@
 		19DC1AD3234111BC00F87ACB /* SectionCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DC1AD1234111BC00F87ACB /* SectionCategoryHeader.swift */; };
 		19DC1AD4234111BC00F87ACB /* SectionCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DC1AD2234111BC00F87ACB /* SectionCategoryHeader.xib */; };
 		19DC1AD62341122200F87ACB /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19DC1AD52341122200F87ACB /* Poppins-Bold.otf */; };
+		19E46E24234D08FB0054DB82 /* CitiesListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46E23234D08FB0054DB82 /* CitiesListTableVC.swift */; };
 		C061B201B1768A2D2F1BD66F /* Pods_awarewego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		19DC1AD1234111BC00F87ACB /* SectionCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCategoryHeader.swift; sourceTree = "<group>"; };
 		19DC1AD2234111BC00F87ACB /* SectionCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionCategoryHeader.xib; sourceTree = "<group>"; };
 		19DC1AD52341122200F87ACB /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
+		19E46E23234D08FB0054DB82 /* CitiesListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListTableVC.swift; sourceTree = "<group>"; };
 		24EB94E6B79A05E96F4FE3C5 /* Pods-awarewego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.release.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.release.xcconfig"; sourceTree = "<group>"; };
 		FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awarewego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -305,6 +307,7 @@
 				19A2BB7D2341F41300669D00 /* FiltersDataModel.swift */,
 				19A2BB7F2341F53F00669D00 /* FilterCellViewModel.swift */,
 				199008E723466A990015277E /* FiltersViewController.swift */,
+				19E46E23234D08FB0054DB82 /* CitiesListTableVC.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				1988879A2344FD63008ECC59 /* UIRecommendSearchController.swift in Sources */,
 				1985B177232D354C00A10C9D /* RoundTextField.swift in Sources */,
 				1971413D23413CD9004CBAEA /* NotificationsViewController.swift in Sources */,
+				19E46E24234D08FB0054DB82 /* CitiesListTableVC.swift in Sources */,
 				1956B491234213430098E32E /* MissionsViewController.swift in Sources */,
 				19D31C44232E3CAC008756C2 /* SwiftyOnboard.swift in Sources */,
 				1904650E233E277D00FA68B6 /* Extensions.swift in Sources */,

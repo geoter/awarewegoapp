@@ -34,4 +34,20 @@ class SearchResultCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch began")
+        self.resultButton.isSelected = !self.resultButton.isSelected
+        super.touchesBegan(touches, with: event)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touch cancel")
+        self.resultButton.isSelected = !self.resultButton.isSelected
+        super.touchesCancelled(touches, with: event)
+    }
+    
 }

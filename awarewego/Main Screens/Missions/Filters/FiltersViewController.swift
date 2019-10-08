@@ -23,7 +23,7 @@ class FiltersViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
+    
     /*
     // MARK: - Navigation
 
