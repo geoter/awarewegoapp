@@ -69,7 +69,7 @@ import UIKit
     }
 
     /// The font of the minimum value text label. If not set, the default is system font size 12.0.
-    open var minLabelFont: UIFont = UIFont.systemFont(ofSize: 12.0) {
+    open var minLabelFont: UIFont = UIFont.systemFont(ofSize: 16.0) {
         didSet {
             minLabel.font = minLabelFont as CFTypeRef
             minLabel.fontSize = minLabelFont.pointSize
@@ -77,7 +77,7 @@ import UIKit
     }
 
     /// The font of the maximum value text label. If not set, the default is system font size 12.0.
-    open var maxLabelFont: UIFont = UIFont.systemFont(ofSize: 12.0) {
+    open var maxLabelFont: UIFont = UIFont.systemFont(ofSize: 16.0) {
         didSet {
             maxLabel.font = maxLabelFont as CFTypeRef
             maxLabel.fontSize = maxLabelFont.pointSize
@@ -411,7 +411,7 @@ import UIKit
         rightHandle.frame = handleFrame
 
         // draw the text labels
-        let labelFontSize: CGFloat = 12.0
+        let labelFontSize: CGFloat = 16.0
         let labelFrame: CGRect = CGRect(x: 0.0, y: 50.0, width: 75.0, height: 14.0)
 
         minLabelFont = UIFont.systemFont(ofSize: labelFontSize)
@@ -560,12 +560,12 @@ import UIKit
         }
 
         let minSpacingBetweenLabels: CGFloat = 8.0
-
+        
         let newMinLabelCenter: CGPoint = CGPoint(x: leftHandle.frame.midX,
-                                                 y: leftHandle.frame.maxY + (minLabelTextSize.height/2) + labelPadding)
+                                                 y: leftHandle.frame.minY - (minLabelTextSize.height/2) - labelPadding)
 
         let newMaxLabelCenter: CGPoint = CGPoint(x: rightHandle.frame.midX,
-                                                 y: rightHandle.frame.maxY + (maxLabelTextSize.height/2) + labelPadding)
+                                                 y: rightHandle.frame.minY - (maxLabelTextSize.height/2) - labelPadding)
         
         let newLeftMostXInMaxLabel: CGFloat = newMaxLabelCenter.x - maxLabelTextSize.width / 2.0
         let newRightMostXInMinLabel: CGFloat = newMinLabelCenter.x + minLabelTextSize.width / 2.0

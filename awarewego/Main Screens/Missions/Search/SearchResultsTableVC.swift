@@ -92,7 +92,7 @@ class SearchResultsTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("touched")
         let cell:SearchResultCell = tableView.cellForRow(at: indexPath) as! SearchResultCell
-        cell.resultButton.isSelected = !cell.resultButton.isSelected
+        cell.selectCell(selected: !cell.isCellSelected)
     }
     /*
     // MARK: - Navigation

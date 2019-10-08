@@ -10,8 +10,12 @@ import UIKit
 
 class SearchResultCell: UITableViewCell {
 
+    
+    public var isCellSelected:Bool {return is_cell_selected}
+    private var is_cell_selected:Bool = false //used to avoid overlay with didselectrow
+    
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var resultButton: RoundButton!
+    @IBOutlet private weak var resultButton: RoundButton!
     
     var resultText:String = ""{
         willSet{
@@ -35,8 +39,7 @@ class SearchResultCell: UITableViewCell {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch began")
-        self.resultButton.isSelected = !self.resultButton.isSelected
+        self.resultButton.isSelected = !is_cell_selected
         super.touchesBegan(touches, with: event)
     }
     
@@ -45,9 +48,12 @@ class SearchResultCell: UITableViewCell {
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touch cancel")
-        self.resultButton.isSelected = !self.resultButton.isSelected
+        self.resultButton.isSelected = is_cell_selected
         super.touchesCancelled(touches, with: event)
+    }
+    
+    func selectCell(selected:Bool) {
+        is_cell_selected = selected
     }
     
 }

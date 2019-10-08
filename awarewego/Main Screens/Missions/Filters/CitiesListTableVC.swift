@@ -12,7 +12,6 @@ class CitiesListTableVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -92,10 +91,16 @@ class CitiesListTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt")
         let cell:SearchResultCell = tableView.cellForRow(at: indexPath) as! SearchResultCell
-        cell.resultButton.isSelected = !cell.resultButton.isSelected
+        cell.selectCell(selected: true)
         
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(backToFilters), object: nil)
+        perform(#selector(backToFilters), with: nil, afterDelay: 0.3)
+    }
+    
+    @objc func backToFilters(){
         self.dismiss(animated: true, completion: nil)
     }
+    
     /*
     // MARK: - Navigation
 

@@ -46,5 +46,29 @@ extension FiltersViewController:RangeSeekSliderDelegate{
         print("enable")
         self.presentationController?.presentedView?.gestureRecognizers?[0].isEnabled = true
     }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String?{
+        switch minValue {
+        case 0...2:
+            return "30'"
+        default:
+            return "0"
+        }
+    }
+
+     /// Called when the RangeSeekSlider values are changed. A return `String?` Value is displayed on the `maxLabel`.
+     ///
+     /// - Parameters:
+     ///   - slider: RangeSeekSlider
+     ///   - maxValue: maximum value
+     /// - Returns: String to be replaced
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMaxValue: CGFloat) -> String?{
+        switch stringForMaxValue {
+             case 70...90:
+                 return "1 hour"
+             default:
+                 return "all"
+             }
+    }
 }
 
