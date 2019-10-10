@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
     */
     
     @IBAction func unwindToLoginViewController(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
+        _ = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
 

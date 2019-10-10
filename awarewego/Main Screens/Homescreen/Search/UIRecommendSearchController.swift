@@ -28,14 +28,14 @@ class UIRecommendSearchController: UISearchController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let recommendVC = recommendationVC{
+        if recommendationVC != nil{
           showRecommendationVC(animated: true)
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if let recommendVC = recommendationVC{
+        if recommendationVC != nil{
             hideRecommendationVC(animated: true)
         }
     }
@@ -82,7 +82,7 @@ class UIRecommendSearchController: UISearchController {
 
 extension UIRecommendSearchController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if let recommendVC = recommendationVC{
+        if recommendationVC != nil{
             if searchText.count == 0 {
                 showRecommendationVC(animated: false)
             }

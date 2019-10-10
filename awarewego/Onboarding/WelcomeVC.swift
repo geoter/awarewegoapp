@@ -70,7 +70,7 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func unwindToWelcomeVC(_ unwindSegue: UIStoryboardSegue) {
-        let sourceViewController = unwindSegue.source
+        _ = unwindSegue.source
         
     }
     

@@ -51,6 +51,9 @@
 		19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3C23141A2400FAC645 /* Assets.xcassets */; };
 		19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */; };
 		19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */; };
+		19BBC34F234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */; };
+		19BBC353234FB38100FDF0D7 /* MissionInfoContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */; };
+		19BBC355234FB39800FDF0D7 /* MissionInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */; };
 		19CF8AE52338D49D00BA8450 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CF8AE42338D49D00BA8450 /* Loading.storyboard */; };
 		19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF8AE82338D70700BA8450 /* LoadingViewController.swift */; };
 		19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D31C3F232E3CAC008756C2 /* SwiftyOnboardPage.swift */; };
@@ -113,6 +116,9 @@
 		19B13D3F23141A2400FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B13D4123141A2400FAC645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissionsStoryboard.storyboard; sourceTree = "<group>"; };
+		19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoContainerVC.swift; sourceTree = "<group>"; };
+		19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoTableVC.swift; sourceTree = "<group>"; };
 		19CF8AE42338D49D00BA8450 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		19CF8AE82338D70700BA8450 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		19D31C3E232E3CAC008756C2 /* SwiftyOnboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyOnboard.h; sourceTree = "<group>"; };
@@ -141,7 +147,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1904650F233E280C00FA68B6 /* Missions */ = {
+		1904650F233E280C00FA68B6 /* Homescreen */ = {
 			isa = PBXGroup;
 			children = (
 				19A2BB7A2341F2FE00669D00 /* Filters */,
@@ -154,7 +160,7 @@
 				19DC1AD2234111BC00F87ACB /* SectionCategoryHeader.xib */,
 				198887942344F119008ECC59 /* Search */,
 			);
-			path = Missions;
+			path = Homescreen;
 			sourceTree = "<group>";
 		};
 		190EA654232E76ED00080D58 /* Forgot */ = {
@@ -247,7 +253,7 @@
 			children = (
 				1956B4932342543D0098E32E /* CustomTabbarController.swift */,
 				1988B2DA2337AC220025CDB3 /* MainStoryboard.storyboard */,
-				1904650F233E280C00FA68B6 /* Missions */,
+				1904650F233E280C00FA68B6 /* Homescreen */,
 				1971412F234136CF004CBAEA /* Notifications */,
 			);
 			path = "Main Screens";
@@ -340,9 +346,20 @@
 				19CF8AE72338D50500BA8450 /* Loading */,
 				191BAAB623293DD3004D47A2 /* Onboarding */,
 				1956B492234253FF0098E32E /* Main Screens */,
+				19BBC34D234F8A7F00FDF0D7 /* Missions */,
 				191BAAC123294E65004D47A2 /* globalClasses */,
 			);
 			path = awarewego;
+			sourceTree = "<group>";
+		};
+		19BBC34D234F8A7F00FDF0D7 /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */,
+				19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */,
+				19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */,
+			);
+			path = Missions;
 			sourceTree = "<group>";
 		};
 		19CF8AE72338D50500BA8450 /* Loading */ = {
@@ -469,6 +486,7 @@
 				1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */,
 				1988878F2344B452008ECC59 /* MissionTableViewCell.xib in Resources */,
 				19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */,
+				19BBC34F234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
 				19DC1AD4234111BC00F87ACB /* SectionCategoryHeader.xib in Resources */,
@@ -528,6 +546,7 @@
 			files = (
 				19D31C45232E3CAC008756C2 /* SwiftyOnboardOverlay.swift in Sources */,
 				198DF0432347C63C006BDA4C /* RangeSeekSliderDelegate.swift in Sources */,
+				19BBC355234FB39800FDF0D7 /* MissionInfoTableVC.swift in Sources */,
 				198DF0452347C63C006BDA4C /* TapticEngine.swift in Sources */,
 				198887982344F8C6008ECC59 /* SearchRecommendationsVC.swift in Sources */,
 				19AB0D24234606660041FD3A /* DGCollectionViewLeftAlignFlowLayout.swift in Sources */,
@@ -548,6 +567,7 @@
 				19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */,
 				198887962344F13C008ECC59 /* SearchResultCell.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
+				19BBC353234FB38100FDF0D7 /* MissionInfoContainerVC.swift in Sources */,
 				195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
 				19046515233E7CED00FA68B6 /* MissionCellViewModel.swift in Sources */,

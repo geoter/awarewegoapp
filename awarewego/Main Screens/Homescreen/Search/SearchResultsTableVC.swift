@@ -108,7 +108,7 @@ class SearchResultsTableVC: UITableViewController {
 
 extension SearchResultsTableVC: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-      let searchBar = searchController.searchBar
+        _ = searchController.searchBar
       //let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
       //filterContentForSearchText(searchController.searchBar.text!, scope: scope)
         tableView.reloadData()
