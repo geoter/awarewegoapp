@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iH7-k3-0cr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iH7-k3-0cr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -301,7 +301,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <containerView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" id="35M-v0-mla">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="-83" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <connections>
                                 <segue destination="8Hh-uu-k39" kind="embed" identifier="filtersScrollVC" id="MKK-be-gRq"/>
@@ -374,7 +374,7 @@
                                                             <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="titleSelectedColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -473,7 +473,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="mI8-HT-Wbd" secondAttribute="bottom" constant="5" id="3TA-ZI-KFD"/>
                                                                 <constraint firstAttribute="trailing" secondItem="mI8-HT-Wbd" secondAttribute="trailing" constant="15" id="IKO-vZ-f7r"/>
@@ -574,7 +574,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="edz-Ak-RmZ" secondAttribute="trailing" constant="18" id="9la-eL-t2P"/>
                                                         <constraint firstItem="edz-Ak-RmZ" firstAttribute="top" secondItem="Fdw-FW-9sd" secondAttribute="top" constant="5" id="Fwv-cR-dEy"/>
@@ -947,7 +947,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-KX-mtU" userLabel="Distance">
-                                <rect key="frame" x="0.0" y="493" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="493" width="414" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Ql-3H-Od3">
                                         <rect key="frame" x="20" y="0.0" width="339" height="27"/>
@@ -974,7 +974,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvd-P7-VBc" customClass="RangeSeekSlider" customModule="awarewego" customModuleProvider="target">
-                                        <rect key="frame" x="41.5" y="37" width="331" height="65"/>
+                                        <rect key="frame" x="41.5" y="37" width="331" height="63"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="tintColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -1006,9 +1006,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="3Ql-3H-Od3" firstAttribute="leading" secondItem="sKg-KX-mtU" secondAttribute="leading" constant="20" id="1zC-WC-O2B"/>
-                                    <constraint firstAttribute="height" constant="100" id="6ao-Uv-Hia"/>
+                                    <constraint firstAttribute="height" constant="105" id="6ao-Uv-Hia"/>
                                     <constraint firstItem="Mvd-P7-VBc" firstAttribute="centerX" secondItem="sKg-KX-mtU" secondAttribute="centerX" id="9GL-Oh-9Uk"/>
                                     <constraint firstItem="Mvd-P7-VBc" firstAttribute="top" secondItem="NeR-hy-Ond" secondAttribute="bottom" constant="10" id="Akf-Xz-1yN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mvd-P7-VBc" secondAttribute="bottom" constant="5" id="Lyw-GT-u1r"/>
                                     <constraint firstItem="3Ql-3H-Od3" firstAttribute="top" secondItem="sKg-KX-mtU" secondAttribute="top" id="waT-MO-ULS"/>
                                 </constraints>
                             </view>
@@ -1105,7 +1106,7 @@
                                                             <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="titleSelectedColor">
                                                             <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1153,7 +1154,7 @@
         <image name="Location setting icon" width="29" height="27"/>
         <image name="Navigation-dark-blue" width="17" height="17"/>
         <image name="Price icon" width="29" height="27"/>
-        <image name="bell.fill" catalog="system" width="64" height="64"/>
+        <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="coin-icon" width="42" height="42"/>
         <image name="parthenon" width="560" height="560"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
