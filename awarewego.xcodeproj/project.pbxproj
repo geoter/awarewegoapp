@@ -54,6 +54,7 @@
 		19BBC34F234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */; };
 		19BBC353234FB38100FDF0D7 /* MissionInfoContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */; };
 		19BBC355234FB39800FDF0D7 /* MissionInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */; };
+		19BBC357234FCF2000FDF0D7 /* InsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC356234FCF2000FDF0D7 /* InsetLabel.swift */; };
 		19CF8AE52338D49D00BA8450 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CF8AE42338D49D00BA8450 /* Loading.storyboard */; };
 		19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CF8AE82338D70700BA8450 /* LoadingViewController.swift */; };
 		19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D31C3F232E3CAC008756C2 /* SwiftyOnboardPage.swift */; };
@@ -119,6 +120,7 @@
 		19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissionsStoryboard.storyboard; sourceTree = "<group>"; };
 		19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoContainerVC.swift; sourceTree = "<group>"; };
 		19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoTableVC.swift; sourceTree = "<group>"; };
+		19BBC356234FCF2000FDF0D7 /* InsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetLabel.swift; sourceTree = "<group>"; };
 		19CF8AE42338D49D00BA8450 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		19CF8AE82338D70700BA8450 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		19D31C3E232E3CAC008756C2 /* SwiftyOnboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyOnboard.h; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				196A1977232A60B000892711 /* RoundButton.swift */,
 				1985B176232D354C00A10C9D /* RoundTextField.swift */,
+				19BBC356234FCF2000FDF0D7 /* InsetLabel.swift */,
 			);
 			path = ReusableUIelements;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */,
 				190EA656232E771800080D58 /* ForgotViewController.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
+				19BBC357234FCF2000FDF0D7 /* InsetLabel.swift in Sources */,
 				1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */,
 				196A1978232A60B000892711 /* RoundButton.swift in Sources */,
 				190EA658232E773600080D58 /* BezierForgotView.swift in Sources */,
