@@ -22,7 +22,6 @@
         <!--Mission Info ContainerVC-->
         <scene sceneID="VyO-5a-WLa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vyI-Fu-p2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MissionInfoVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dPf-BZ-r2I" customClass="MissionInfoContainerVC" customModule="awarewego" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMY-Hl-p8v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -65,6 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="ekU-yS-659"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyI-Fu-p2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
@@ -93,9 +93,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-Gs-qeu">
                                                     <rect key="frame" x="20" y="29" width="374" height="28"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="28" id="xkV-0n-2gO"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
