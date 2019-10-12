@@ -65,6 +65,7 @@
 		19DC1AD4234111BC00F87ACB /* SectionCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19DC1AD2234111BC00F87ACB /* SectionCategoryHeader.xib */; };
 		19DC1AD62341122200F87ACB /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19DC1AD52341122200F87ACB /* Poppins-Bold.otf */; };
 		19E46E24234D08FB0054DB82 /* CitiesListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46E23234D08FB0054DB82 /* CitiesListTableVC.swift */; };
+		19F0A2E02352224600138B0E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F0A2DF2352224600138B0E /* MapKit.framework */; };
 		C061B201B1768A2D2F1BD66F /* Pods_awarewego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		19DC1AD2234111BC00F87ACB /* SectionCategoryHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionCategoryHeader.xib; sourceTree = "<group>"; };
 		19DC1AD52341122200F87ACB /* Poppins-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.otf"; sourceTree = "<group>"; };
 		19E46E23234D08FB0054DB82 /* CitiesListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListTableVC.swift; sourceTree = "<group>"; };
+		19F0A2DF2352224600138B0E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		24EB94E6B79A05E96F4FE3C5 /* Pods-awarewego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awarewego.release.xcconfig"; path = "Target Support Files/Pods-awarewego/Pods-awarewego.release.xcconfig"; sourceTree = "<group>"; };
 		FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awarewego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F0A2E02352224600138B0E /* MapKit.framework in Frameworks */,
 				C061B201B1768A2D2F1BD66F /* Pods_awarewego.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +402,7 @@
 		483D1677673F1B31435D0886 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19F0A2DF2352224600138B0E /* MapKit.framework */,
 				FA2CF29537F1B376E50CDD7C /* Pods_awarewego.framework */,
 			);
 			name = Frameworks;
@@ -425,6 +429,7 @@
 				19B13D2F23141A1E00FAC645 /* Frameworks */,
 				19B13D3023141A1E00FAC645 /* Resources */,
 				1BB81317BEC6D87A7CBCB903 /* [CP] Embed Pods Frameworks */,
+				1975204A235202CC00612600 /* Crashlytics Run Script */,
 			);
 			buildRules = (
 			);
@@ -501,6 +506,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1975204A235202CC00612600 /* Crashlytics Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Resources/Info.plist",
+			);
+			name = "Crashlytics Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
 		1BB81317BEC6D87A7CBCB903 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -735,6 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 996595AM5Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

@@ -7,11 +7,15 @@ target 'awarewego' do
 
   # Pods for awarewego
   #firebase pods
-#pod 'Firebase/Analytics'
 #pod 'Firebase/Auth'
 #pod 'Firebase/Firestore'
 #pod 'Firebase/Functions'
 #pod 'Protobuf', :inhibit_warnings => true
+pod 'Fabric', '~> 1.10.2'
+pod 'Crashlytics', '~> 3.14.0'
+
+# (Recommended) Pod for Google Analytics
+pod 'Firebase/Analytics'
 
 #third party pods
 #pod 'SwiftyOnboard'
