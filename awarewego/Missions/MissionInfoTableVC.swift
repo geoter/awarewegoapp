@@ -10,8 +10,10 @@ import UIKit
 
 class MissionInfoTableVC: UITableViewController {
 
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var missionTitleLabel: UILabel!
     @IBOutlet weak var missionDescriptionLabel: UILabel!
+    @IBOutlet weak var poisCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,4 +54,26 @@ class MissionInfoTableVC: UITableViewController {
     }
     */
 
+}
+
+extension MissionInfoTableVC: UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PoiCell", for: indexPath)
+        let imgV = cell.viewWithTag(1) as! UIImageView
+        let poiNameLabel = cell.viewWithTag(2) as! UILabel
+        
+        imgV.image = UIImage(named: "parthenon_poi")
+        poiNameLabel.text = "The parthenon the parthenon"
+    
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
