@@ -150,11 +150,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="384" id="79a-0b-jS7" userLabel="Mission pois">
-                                        <rect key="frame" x="0.0" y="379" width="375" height="384"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="79a-0b-jS7" userLabel="Mission pois">
+                                        <rect key="frame" x="0.0" y="379" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79a-0b-jS7" id="nHY-FE-xAA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="384"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79a-0b-jS7" id="nHY-FE-xAA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will visit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaX-YE-dos" customClass="InsetLabel" customModule="awarewego" customModuleProvider="target">
@@ -176,10 +176,10 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wAt-L9-bE3">
-                                                    <rect key="frame" x="0.0" y="72" width="375" height="300"/>
+                                                    <rect key="frame" x="0.0" y="72" width="375" height="293"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="uF6-5e-8IO"/>
+                                                        <constraint firstAttribute="height" priority="750" constant="300" id="uF6-5e-8IO"/>
                                                     </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ejl-cV-R6f">
                                                         <size key="itemSize" width="150" height="260"/>
@@ -189,11 +189,11 @@
                                                         <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoiCell" id="c7c-4c-0KF" customClass="PoiCell" customModule="awarewego" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="7.5" width="150" height="285"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PoiCell" id="c7c-4c-0KF">
+                                                            <rect key="frame" x="20" y="0.5" width="150" height="292"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mOf-Hz-RXy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="285"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="292"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJF-PW-gWx">
@@ -204,14 +204,14 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="The parthenon the parthenon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3C-XX-n4P">
-                                                                        <rect key="frame" x="0.0" y="238" width="150" height="42"/>
+                                                                        <rect key="frame" x="0.0" y="245" width="150" height="42"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="I3C-XX-n4P" firstAttribute="top" secondItem="mJF-PW-gWx" secondAttribute="bottom" constant="8" id="AKD-jx-loq"/>
+                                                                    <constraint firstItem="I3C-XX-n4P" firstAttribute="top" secondItem="mJF-PW-gWx" secondAttribute="bottom" constant="15" id="AKD-jx-loq"/>
                                                                     <constraint firstItem="I3C-XX-n4P" firstAttribute="leading" secondItem="mOf-Hz-RXy" secondAttribute="leading" id="HDb-oY-hyH"/>
                                                                     <constraint firstItem="mJF-PW-gWx" firstAttribute="leading" secondItem="mOf-Hz-RXy" secondAttribute="leading" id="PeU-mE-lh6"/>
                                                                     <constraint firstItem="mJF-PW-gWx" firstAttribute="top" secondItem="mOf-Hz-RXy" secondAttribute="top" id="kEr-yF-MFj"/>
@@ -231,7 +231,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LaX-YE-dos" secondAttribute="trailing" id="2rU-OS-A8q"/>
                                                 <constraint firstItem="wAt-L9-bE3" firstAttribute="leading" secondItem="nHY-FE-xAA" secondAttribute="leading" id="NPg-G4-7Xc"/>
-                                                <constraint firstAttribute="bottom" secondItem="wAt-L9-bE3" secondAttribute="bottom" constant="22" id="QBi-Gl-f3Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="wAt-L9-bE3" secondAttribute="bottom" constant="10" id="QBi-Gl-f3Q"/>
                                                 <constraint firstItem="LaX-YE-dos" firstAttribute="leading" secondItem="nHY-FE-xAA" secondAttribute="leadingMargin" id="Xtu-UQ-UUQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="wAt-L9-bE3" secondAttribute="trailing" id="ZYq-wk-7GO"/>
                                                 <constraint firstItem="wAt-L9-bE3" firstAttribute="top" secondItem="LaX-YE-dos" secondAttribute="bottom" constant="22" id="llU-dq-Nr2"/>
@@ -240,7 +240,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="214" id="z4b-zo-VZo" userLabel="Mission map">
-                                        <rect key="frame" x="0.0" y="763" width="375" height="214"/>
+                                        <rect key="frame" x="0.0" y="754" width="375" height="214"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4b-zo-VZo" id="9qJ-L9-81m">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
@@ -248,7 +248,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The route" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-0V-79m" customClass="InsetLabel" customModule="awarewego" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="11" width="343" height="39"/>
-                                                    <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="39" id="8ew-CO-diN"/>
                                                     </constraints>
@@ -280,7 +280,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="owz-t2-rYf" userLabel="Mission more info">
-                                        <rect key="frame" x="0.0" y="977" width="375" height="125"/>
+                                        <rect key="frame" x="0.0" y="968" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owz-t2-rYf" id="Rpg-ty-SEL">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
