@@ -49,10 +49,29 @@
                                     <segue destination="Rrj-3R-3Oy" kind="embed" id="Zz2-lY-2po"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsO-VD-pA3" customClass="RoundButton" customModule="awarewego" customModuleProvider="target">
+                                <rect key="frame" x="65" y="587" width="245" height="60"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="0BA-HI-wJS"/>
+                                    <constraint firstAttribute="height" constant="60" id="vJX-Fk-GJW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="BEGIN MISSION">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ekU-yS-659" firstAttribute="bottom" secondItem="DsO-VD-pA3" secondAttribute="bottom" constant="20" id="MG4-ry-22a"/>
                             <constraint firstItem="9ag-WK-cgp" firstAttribute="leading" secondItem="ekU-yS-659" secondAttribute="leading" id="NAc-AI-8kK"/>
+                            <constraint firstItem="DsO-VD-pA3" firstAttribute="centerX" secondItem="gMY-Hl-p8v" secondAttribute="centerX" id="WWX-DV-GsQ"/>
                             <constraint firstItem="9ag-WK-cgp" firstAttribute="trailing" secondItem="ekU-yS-659" secondAttribute="trailing" id="YMT-LY-N3w"/>
                             <constraint firstItem="ekU-yS-659" firstAttribute="bottom" secondItem="9ag-WK-cgp" secondAttribute="bottom" id="cNH-ZB-ccR"/>
                             <constraint firstItem="ekU-yS-659" firstAttribute="bottom" secondItem="uBL-Oz-jLl" secondAttribute="bottom" id="eCb-9l-OUP"/>
@@ -63,6 +82,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekU-yS-659"/>
                     </view>
+                    <connections>
+                        <outlet property="beginButtonBottomConstraint" destination="MG4-ry-22a" id="b16-Q0-Q6r"/>
+                        <outlet property="beginButtonHeightConstraint" destination="vJX-Fk-GJW" id="7qT-Hs-hFr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyI-Fu-p2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +107,7 @@
                         <sections>
                             <tableViewSection headerTitle="" id="hGX-Bc-nR1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="SmU-Iq-g0Z" userLabel="Mission information">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Information" rowHeight="64" id="SmU-Iq-g0Z" userLabel="Mission information">
                                         <rect key="frame" x="0.0" y="228" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SmU-Iq-g0Z" id="ZbA-3r-r7W">
@@ -106,7 +129,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UZH-AC-Dpw" userLabel="Mission title">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" id="UZH-AC-Dpw" userLabel="Mission title">
                                         <rect key="frame" x="0.0" y="292" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UZH-AC-Dpw" id="JG0-pF-HJi">
@@ -128,7 +151,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="znw-j6-OeM" userLabel="Mission description">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Description" id="znw-j6-OeM" userLabel="Mission description">
                                         <rect key="frame" x="0.0" y="335.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znw-j6-OeM" id="7Q6-pg-Ah0">
@@ -150,7 +173,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="79a-0b-jS7" userLabel="Mission pois">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Pois" rowHeight="375" id="79a-0b-jS7" userLabel="Mission pois">
                                         <rect key="frame" x="0.0" y="379" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79a-0b-jS7" id="nHY-FE-xAA">
@@ -239,7 +262,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="214" id="z4b-zo-VZo" userLabel="Mission map">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" rowHeight="214" id="z4b-zo-VZo" userLabel="Mission map">
                                         <rect key="frame" x="0.0" y="754" width="375" height="214"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4b-zo-VZo" id="9qJ-L9-81m">
@@ -247,7 +270,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The route" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-0V-79m" customClass="InsetLabel" customModule="awarewego" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="11" width="343" height="39"/>
+                                                    <rect key="frame" x="24" y="11" width="327" height="39"/>
                                                     <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="39" id="8ew-CO-diN"/>
@@ -265,7 +288,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mi3-cd-fev">
-                                                    <rect key="frame" x="16" y="66" width="343" height="138"/>
+                                                    <rect key="frame" x="24" y="66" width="327" height="138"/>
                                                 </mapView>
                                             </subviews>
                                             <constraints>
@@ -279,7 +302,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="125" id="owz-t2-rYf" userLabel="Mission more info">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="More Info" rowHeight="125" id="owz-t2-rYf" userLabel="Mission more info">
                                         <rect key="frame" x="0.0" y="968" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owz-t2-rYf" id="Rpg-ty-SEL">
@@ -287,7 +310,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyv-M5-Zhu" customClass="InsetLabel" customModule="awarewego" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="39"/>
+                                                    <rect key="frame" x="24" y="0.0" width="327" height="39"/>
                                                     <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="39" id="62x-gb-mHE"/>
@@ -305,7 +328,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="hJp-Ik-bNZ">
-                                                    <rect key="frame" x="24" y="49" width="327" height="65"/>
+                                                    <rect key="frame" x="32" y="49" width="311" height="65"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bGs-Yy-eji" userLabel="Price">
                                                             <rect key="frame" x="0.0" y="5.5" width="38.5" height="54.5"/>
@@ -325,7 +348,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AbK-bA-Ubg" userLabel="Rating">
-                                                            <rect key="frame" x="129" y="7.5" width="50" height="50"/>
+                                                            <rect key="frame" x="121" y="7.5" width="50" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ani-oe-Mmk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
@@ -342,7 +365,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vSQ-IO-76J" userLabel="Reward">
-                                                            <rect key="frame" x="269" y="7.5" width="58" height="50"/>
+                                                            <rect key="frame" x="253" y="7.5" width="58" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-5u-1T5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="58" height="21"/>

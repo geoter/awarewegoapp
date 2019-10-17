@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol MissionInfoTableVCScrollDelegate {
+    func scrollBegan(scrollView:UIScrollView)
+    func scrollEnded(scrollView:UIScrollView)
+}
+
 class MissionInfoTableVC: UITableViewController {
 
+    var scrollBehaviourDelegate:MissionInfoTableVCScrollDelegate?
+    
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var missionTitleLabel: UILabel!
     @IBOutlet weak var missionDescriptionLabel: UILabel!
@@ -25,24 +32,24 @@ class MissionInfoTableVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if let parentVC = self.parent{
+           if let conformingParent = parentVC as? MissionInfoTableVCScrollDelegate{
+               self.scrollBehaviourDelegate = conformingParent
+           }
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        ScrollTimer._timer?.invalidate()
     }
-    */
-
 
     /*
     // MARK: - Navigation
@@ -75,5 +82,46 @@ extension MissionInfoTableVC: UICollectionViewDelegate,UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension MissionInfoTableVC{
+    
+    struct ScrollTimer {
+        fileprivate static var _timer:Timer? = nil {
+            didSet{
+                RunLoop.current.add(_timer!, forMode: .common)
+                _timer?.tolerance = 0.1
+            }
+        }
+        fileprivate static var counter = 0{
+            didSet{
+                print("\(counter)")
+            }
+        }
+    }
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.scrollBehaviourDelegate?.scrollBegan(scrollView: scrollView)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setTimer()
+    }
+    
+    func setTimer(){
+        if let timer = ScrollTimer._timer{
+            timer.invalidate()
+        }
+        ScrollTimer._timer = Timer.scheduledTimer(timeInterval:0.5,target:self ,
+                  selector: #selector(scrollEndedTrigger),
+                  userInfo: nil,
+                  repeats: false)
+        ScrollTimer.counter = ScrollTimer.counter + 1
+        
+    }
+    
+    @objc func scrollEndedTrigger() {
+        self.scrollBehaviourDelegate?.scrollEnded(scrollView: self.tableView)
     }
 }

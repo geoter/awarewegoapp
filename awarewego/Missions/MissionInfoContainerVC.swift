@@ -9,13 +9,16 @@
 import UIKit
 
 class MissionInfoContainerVC: UIViewController {
+    
+    @IBOutlet weak var beginButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var beginButtonHeightConstraint: NSLayoutConstraint!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -29,17 +32,19 @@ class MissionInfoContainerVC: UIViewController {
 
 }
 
-extension MissionInfoContainerVC: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath)
-        return cell
+extension MissionInfoContainerVC: MissionInfoTableVCScrollDelegate{
+    
+    func scrollBegan(scrollView:UIScrollView){
+        self.beginButtonBottomConstraint.constant = -(20+self.beginButtonHeightConstraint.constant)
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+    func scrollEnded(scrollView:UIScrollView){
+        self.beginButtonBottomConstraint.constant = 20
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
