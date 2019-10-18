@@ -23,6 +23,8 @@
 		1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B790232BB26200DDCA12 /* LoginViewController.swift */; };
 		1956B491234213430098E32E /* MissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B490234213430098E32E /* MissionsViewController.swift */; };
 		1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B4932342543D0098E32E /* CustomTabbarController.swift */; };
+		195AD68A235A0A5F0018185B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195AD688235A0A5F0018185B /* MapVC.swift */; };
+		195AD68B235A0A5F0018185B /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195AD689235A0A5F0018185B /* MapVC.xib */; };
 		195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195C64BB232FFED900681B0B /* SignupViewController.swift */; };
 		196A1978232A60B000892711 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196A1977232A60B000892711 /* RoundButton.swift */; };
 		196F9788232D3B4500F814EE /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 196F9787232D3B4500F814EE /* Montserrat-Medium.otf */; };
@@ -87,6 +89,8 @@
 		1951B790232BB26200DDCA12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1956B490234213430098E32E /* MissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewController.swift; sourceTree = "<group>"; };
 		1956B4932342543D0098E32E /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		195AD688235A0A5F0018185B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		195AD689235A0A5F0018185B /* MapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
 		195C64BB232FFED900681B0B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		196A1977232A60B000892711 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		196F9787232D3B4500F814EE /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
@@ -265,6 +269,15 @@
 			path = "Main Screens";
 			sourceTree = "<group>";
 		};
+		195AD687235A0A390018185B /* Geneal Purpose */ = {
+			isa = PBXGroup;
+			children = (
+				195AD688235A0A5F0018185B /* MapVC.swift */,
+				195AD689235A0A5F0018185B /* MapVC.xib */,
+			);
+			path = "Geneal Purpose";
+			sourceTree = "<group>";
+		};
 		196DD0E2232FBB4F00C36763 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +366,7 @@
 				191BAAB623293DD3004D47A2 /* Onboarding */,
 				1956B492234253FF0098E32E /* Main Screens */,
 				19BBC34D234F8A7F00FDF0D7 /* Missions */,
+				195AD687235A0A390018185B /* Geneal Purpose */,
 				191BAAC123294E65004D47A2 /* globalClasses */,
 			);
 			path = awarewego;
@@ -490,6 +504,7 @@
 				1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */,
 				191BAABE23293FAA004D47A2 /* OnboardOverlay.xib in Resources */,
 				1971413B23413A07004CBAEA /* Poppins-Medium.otf in Resources */,
+				195AD68B235A0A5F0018185B /* MapVC.xib in Resources */,
 				1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */,
 				1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */,
 				1988878F2344B452008ECC59 /* MissionTableViewCell.xib in Resources */,
@@ -596,6 +611,7 @@
 				198887962344F13C008ECC59 /* SearchResultCell.swift in Sources */,
 				19B13D3623141A1F00FAC645 /* AppDelegate.swift in Sources */,
 				19BBC353234FB38100FDF0D7 /* MissionInfoContainerVC.swift in Sources */,
+				195AD68A235A0A5F0018185B /* MapVC.swift in Sources */,
 				195C64BC232FFED900681B0B /* SignupViewController.swift in Sources */,
 				191BAAC323294E7B004D47A2 /* sharedLogic.swift in Sources */,
 				19046515233E7CED00FA68B6 /* MissionCellViewModel.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 protocol MissionInfoTableVCScrollDelegate {
     func scrollBegan(scrollView:UIScrollView)
@@ -16,27 +17,28 @@ protocol MissionInfoTableVCScrollDelegate {
 class MissionInfoTableVC: UITableViewController {
 
     var scrollBehaviourDelegate:MissionInfoTableVCScrollDelegate?
-    
-    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+
     @IBOutlet weak var missionTitleLabel: UILabel!
     @IBOutlet weak var missionDescriptionLabel: UILabel!
     @IBOutlet weak var poisCollectionView: UICollectionView!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.missionTitleLabel.text = "Athena's wrath and the magic feather of swifer skai tv show ad"
         self.missionDescriptionLabel.text = "there is a very good reason to do it there is a very good reason to do it there is a very good reason to do it there is a very good reason to do it there is a very good reason to do it there is a very good reason to do it there is a very good reason to do it "
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        drawMapPoints()
     }
 
     // MARK: - Table view data source
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let parentVC = self.parent{
@@ -51,6 +53,17 @@ class MissionInfoTableVC: UITableViewController {
         ScrollTimer._timer?.invalidate()
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let identifier = tableView.cellForRow(at: indexPath)?.reuseIdentifier{
+            switch identifier {
+            case "Map":
+               let mapvc = MapVC(nibName: "MapVC", bundle: nil)
+               self.present(mapvc, animated: true, completion: nil)
+            default: break
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -94,11 +107,6 @@ extension MissionInfoTableVC{
                 _timer?.tolerance = 0.1
             }
         }
-        fileprivate static var counter = 0{
-            didSet{
-                print("\(counter)")
-            }
-        }
     }
     
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -117,11 +125,74 @@ extension MissionInfoTableVC{
                   selector: #selector(scrollEndedTrigger),
                   userInfo: nil,
                   repeats: false)
-        ScrollTimer.counter = ScrollTimer.counter + 1
-        
     }
     
     @objc func scrollEndedTrigger() {
         self.scrollBehaviourDelegate?.scrollEnded(scrollView: self.tableView)
     }
+}
+
+extension MissionInfoTableVC:MKMapViewDelegate{
+    
+    struct MapPoint{
+        var title:String
+        var latitude:Double
+        var longitude:Double
+        var coordinate:CLLocationCoordinate2D{
+            return CLLocationCoordinate2DMake(latitude,longitude)
+        }
+    }
+    
+    func drawMapPoints(){
+        let poi1 = MapPoint(title: "Thissio", latitude: 37.976713, longitude: 23.720646)
+        let poi2 = MapPoint(title: "Kerameikos", latitude: 37.978653, longitude: 23.711482)
+        let poi3 = MapPoint(title: "Benaki", latitude: 37.974840, longitude: 23.708397)
+        
+        addMapPoint(poi: poi1)
+        addMapPoint(poi: poi2)
+        addMapPoint(poi: poi3)
+        
+        mapView.fitAll()
+        
+        var locations = [poi1,poi2,poi3].map { $0.coordinate }
+        let polygon = MKPolygon(coordinates: &locations, count: locations.count)
+        mapView?.addOverlay(polygon)
+    }
+    
+    func addMapPoint(poi:MapPoint){
+        let pin = MKPointAnnotation()
+        pin.title = poi.title
+        pin.coordinate = CLLocationCoordinate2D(latitude: poi.latitude, longitude: poi.longitude)
+        mapView.addAnnotation(pin)
+    }
+    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        guard annotation is MKPointAnnotation else { return nil }
+//
+//        let identifier = "Annotation"
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+//
+//        if annotationView == nil {
+//            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+//            annotationView!.canShowCallout = false
+//        } else {
+//            annotationView!.annotation = annotation
+//        }
+//
+//        return annotationView
+//    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        if overlay is MKPolygon {
+            let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            renderer.fillColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 0.8225866866)
+            //renderer.strokeColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            //renderer.lineWidth = 2
+            return renderer
+        }
+        
+        return MKOverlayRenderer()
+    }
+    
 }

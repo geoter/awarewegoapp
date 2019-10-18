@@ -82,6 +82,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekU-yS-659"/>
                     </view>
+                    <navigationItem key="navigationItem" id="stq-if-cnB"/>
                     <connections>
                         <outlet property="beginButtonBottomConstraint" destination="MG4-ry-22a" id="b16-Q0-Q6r"/>
                         <outlet property="beginButtonHeightConstraint" destination="vJX-Fk-GJW" id="7qT-Hs-hFr"/>
@@ -89,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyI-Fu-p2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1076" y="85.007496251874073"/>
         </scene>
         <!--Mission Info TableVC-->
         <scene sceneID="JFb-nl-UWh">
@@ -107,7 +108,7 @@
                         <sections>
                             <tableViewSection headerTitle="" id="hGX-Bc-nR1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Information" rowHeight="64" id="SmU-Iq-g0Z" userLabel="Mission information">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Information" rowHeight="64" id="SmU-Iq-g0Z" userLabel="Mission information">
                                         <rect key="frame" x="0.0" y="228" width="375" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SmU-Iq-g0Z" id="ZbA-3r-r7W">
@@ -129,7 +130,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" id="UZH-AC-Dpw" userLabel="Mission title">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Title" id="UZH-AC-Dpw" userLabel="Mission title">
                                         <rect key="frame" x="0.0" y="292" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UZH-AC-Dpw" id="JG0-pF-HJi">
@@ -151,7 +152,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Description" id="znw-j6-OeM" userLabel="Mission description">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Description" id="znw-j6-OeM" userLabel="Mission description">
                                         <rect key="frame" x="0.0" y="335.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znw-j6-OeM" id="7Q6-pg-Ah0">
@@ -173,7 +174,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Pois" rowHeight="375" id="79a-0b-jS7" userLabel="Mission pois">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Pois" rowHeight="375" id="79a-0b-jS7" userLabel="Mission pois">
                                         <rect key="frame" x="0.0" y="379" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79a-0b-jS7" id="nHY-FE-xAA">
@@ -262,7 +263,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" rowHeight="214" id="z4b-zo-VZo" userLabel="Mission map">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Map" rowHeight="214" id="z4b-zo-VZo" userLabel="Mission map">
                                         <rect key="frame" x="0.0" y="754" width="375" height="214"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4b-zo-VZo" id="9qJ-L9-81m">
@@ -287,8 +288,16 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mi3-cd-fev">
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mi3-cd-fev">
                                                     <rect key="frame" x="24" y="66" width="327" height="138"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Rrj-3R-3Oy" id="7lA-0u-0eD"/>
+                                                    </connections>
                                                 </mapView>
                                             </subviews>
                                             <constraints>
@@ -404,6 +413,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="mapView" destination="mi3-cd-fev" id="9Is-Yg-0kk"/>
                         <outlet property="missionDescriptionLabel" destination="rqb-qf-rvM" id="HRo-5q-SnC"/>
                         <outlet property="missionTitleLabel" destination="1nF-HW-Mx5" id="73C-qC-vZu"/>
                         <outlet property="poisCollectionView" destination="wAt-L9-bE3" id="0Yw-OS-WO4"/>
@@ -411,7 +421,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3g-VQ-dEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="85.007496251874073"/>
+            <point key="canvasLocation" x="1844" y="85.007496251874073"/>
         </scene>
     </scenes>
     <resources>
