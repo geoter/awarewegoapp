@@ -15,7 +15,7 @@ class PoiAnnotationMarkerView: MKMarkerAnnotationView {
         willSet {
           guard let poi = newValue as? PoiAnnotation else { return }
           canShowCallout = true
-          calloutOffset = CGPoint(x: -5, y: 5)
+          //calloutOffset = CGPoint(x: -5, y: 5)
           rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
 
           markerTintColor = poi.markerTintColor
@@ -58,6 +58,8 @@ class PoiAnnotationView: MKAnnotationView {
       detailLabel.font = detailLabel.font.withSize(12)
       detailLabel.text = artwork.subtitle
       detailCalloutAccessoryView = detailLabel
+        
+      rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
     }
   }
 

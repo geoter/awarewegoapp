@@ -35,7 +35,7 @@ class PoiAnnotation: NSObject, MKAnnotation {
         _imagename ?? "map_pin_blue"
     }
 
-    var markerTintColor: UIColor = UIColor.blue
+    var markerTintColor: UIColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1) //if marker is used
     
     init(title: String, subtitle: String, coordinate: CLLocationCoordinate2D, imageName: String?) {
        self.title = title

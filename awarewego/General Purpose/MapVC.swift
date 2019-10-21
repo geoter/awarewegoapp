@@ -19,7 +19,7 @@ class MapVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.register(PoiAnnotationView.self,
+        mapView.register(PoiAnnotationMarkerView.self,
         forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         drawMapPoints()
@@ -30,9 +30,12 @@ class MapVC: UIViewController {
 extension MapVC:MKMapViewDelegate{
     
     func drawMapPoints(){
-        let poi1 = PoiAnnotation.Poi(title: "Thissio",subtitle:"5km away", latitude: 37.976713, longitude: 23.720646, imageName: "")
-        let poi2 = PoiAnnotation.Poi(title: "Kerameikos",subtitle:"5km away", latitude: 37.978653, longitude: 23.711482)
-        let poi3 = PoiAnnotation.Poi(title: "Benaki",subtitle:"5km away", latitude: 37.974840, longitude: 23.708397)
+        
+        //FIXME: Remove parthenon pin
+        
+        let poi1 = PoiAnnotation.Poi(title: "Thissio",subtitle:"Temple", latitude: 37.976713, longitude: 23.720646, imageName: "map-parthenon")
+        let poi2 = PoiAnnotation.Poi(title: "Kerameikos",subtitle:"Market", latitude: 37.978653, longitude: 23.711482, imageName: "temple_map")
+        let poi3 = PoiAnnotation.Poi(title: "Benaki",subtitle:"Museum", latitude: 37.974840, longitude: 23.708397)
         
         let annotations = [poi1,poi2,poi3].map { PoiAnnotation(poi:$0) }
         
@@ -53,7 +56,7 @@ extension MapVC:MKMapViewDelegate{
         
         if overlay is MKPolygon {
             let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
-            renderer.fillColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 0.8225866866)
+            renderer.fillColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 0.4875856164)
             //renderer.strokeColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             //renderer.lineWidth = 2
             return renderer
