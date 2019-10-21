@@ -448,7 +448,6 @@
 				19B13D2E23141A1E00FAC645 /* Sources */,
 				19B13D2F23141A1E00FAC645 /* Frameworks */,
 				19B13D3023141A1E00FAC645 /* Resources */,
-				1BB81317BEC6D87A7CBCB903 /* [CP] Embed Pods Frameworks */,
 				1975204A235202CC00612600 /* Crashlytics Run Script */,
 				192A9040235DBFFB00E3977B /* TODO,FIX Warnings */,
 			);
@@ -564,23 +563,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
-		};
-		1BB81317BEC6D87A7CBCB903 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		65DE4796777AA56C23DA2BA2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

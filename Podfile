@@ -11,13 +11,13 @@ target 'awarewego' do
 #pod 'Firebase/Firestore'
 #pod 'Firebase/Functions'
 #pod 'Protobuf', :inhibit_warnings => true
-pod 'Fabric', '~> 1.10.2'
-pod 'Crashlytics', '~> 3.14.0'
+#pod 'Fabric', '~> 1.10.2'
+#pod 'Crashlytics', '~> 3.14.0'
 
 # (Recommended) Pod for Google Analytics
-pod 'Firebase/Analytics'
+#pod 'Firebase/Analytics'
 
 #third party pods
 #pod 'SwiftyOnboard'
-pod 'CHIPageControl/Jaloro'
+#pod 'CHIPageControl/Jaloro'
 end
