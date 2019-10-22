@@ -1,0 +1,6 @@
+framework module SlidingPhoto {
+  umbrella header "SlidingPhoto-umbrella.h"
+
+  export *
+  module * { export * }
+}
