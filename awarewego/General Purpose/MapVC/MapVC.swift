@@ -93,17 +93,10 @@ extension MapVC:MKMapViewDelegate{
        /// Called whent he user taps the disclosure button in the bridge callout.
       func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
               
-          if let detailNavController = storyboard?.instantiateViewController(withIdentifier: "DetailNavController") {
-              detailNavController.modalPresentationStyle = .popover
-              let presentationController = detailNavController.popoverPresentationController
-              presentationController?.permittedArrowDirections = .any
-              
-              // Anchor the popover to the button that triggered the popover.
-              presentationController?.sourceRect = control.frame
-              presentationController?.sourceView = control
-              
-              present(detailNavController, animated: true, completion: nil)
-          }
+        let storyboard = UIStoryboard(name: "PoisStoryboard", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "PoisInfoContainerVC")
+        
+        self.present(detailVC, animated: true, completion: nil)
       }
           
 }

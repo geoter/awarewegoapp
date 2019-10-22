@@ -20,6 +20,7 @@
 		1937CAA0232981C800641AAC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9E232981C800641AAC /* Montserrat-Bold.otf */; };
 		1937CAA1232981C800641AAC /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CA9F232981C800641AAC /* Poppins-Regular.otf */; };
 		1937CAA32329829600641AAC /* Poppins-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */; };
+		193C698B235DF3730009D013 /* PoiInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C698A235DF3730009D013 /* PoiInfoTableVC.swift */; };
 		1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951B790232BB26200DDCA12 /* LoginViewController.swift */; };
 		1956B491234213430098E32E /* MissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B490234213430098E32E /* MissionsViewController.swift */; };
 		1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956B4932342543D0098E32E /* CustomTabbarController.swift */; };
@@ -55,6 +56,8 @@
 		19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3C23141A2400FAC645 /* Assets.xcassets */; };
 		19B13D4023141A2400FAC645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D3E23141A2400FAC645 /* LaunchScreen.storyboard */; };
 		19B13D4823141BAD00FAC645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */; };
+		19B9CDC8235DF2BD0088ABEF /* PoisStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9CDC7235DF2BD0088ABEF /* PoisStoryboard.storyboard */; };
+		19B9CDCC235DF3020088ABEF /* PoisInfoContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9CDCB235DF3020088ABEF /* PoisInfoContainerVC.swift */; };
 		19BBC34F234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */; };
 		19BBC353234FB38100FDF0D7 /* MissionInfoContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */; };
 		19BBC355234FB39800FDF0D7 /* MissionInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */; };
@@ -88,6 +91,7 @@
 		1937CA9E232981C800641AAC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
 		1937CA9F232981C800641AAC /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		1937CAA22329829600641AAC /* Poppins-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.otf"; sourceTree = "<group>"; };
+		193C698A235DF3730009D013 /* PoiInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiInfoTableVC.swift; sourceTree = "<group>"; };
 		1951B790232BB26200DDCA12 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1956B490234213430098E32E /* MissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewController.swift; sourceTree = "<group>"; };
 		1956B4932342543D0098E32E /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		19B13D3F23141A2400FAC645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B13D4123141A2400FAC645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B13D4723141BAD00FAC645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19B9CDC7235DF2BD0088ABEF /* PoisStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PoisStoryboard.storyboard; sourceTree = "<group>"; };
+		19B9CDCB235DF3020088ABEF /* PoisInfoContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoisInfoContainerVC.swift; sourceTree = "<group>"; };
 		19BBC34E234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissionsStoryboard.storyboard; sourceTree = "<group>"; };
 		19BBC352234FB38100FDF0D7 /* MissionInfoContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoContainerVC.swift; sourceTree = "<group>"; };
 		19BBC354234FB39800FDF0D7 /* MissionInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoTableVC.swift; sourceTree = "<group>"; };
@@ -276,10 +282,7 @@
 		195AD687235A0A390018185B /* General Purpose */ = {
 			isa = PBXGroup;
 			children = (
-				195AD688235A0A5F0018185B /* MapVC.swift */,
-				195AD689235A0A5F0018185B /* MapVC.xib */,
-				198E51D8235A4FD900B2199C /* PoiAnnotation.swift */,
-				198E51DA235A54BA00B2199C /* PoiAnnotationView.swift */,
+				19B9CDC5235DE8CA0088ABEF /* MapVC */,
 			);
 			path = "General Purpose";
 			sourceTree = "<group>";
@@ -372,10 +375,32 @@
 				191BAAB623293DD3004D47A2 /* Onboarding */,
 				1956B492234253FF0098E32E /* Main Screens */,
 				19BBC34D234F8A7F00FDF0D7 /* Missions */,
+				19B9CDC6235DF2A50088ABEF /* Pois */,
 				195AD687235A0A390018185B /* General Purpose */,
 				191BAAC123294E65004D47A2 /* globalClasses */,
 			);
 			path = awarewego;
+			sourceTree = "<group>";
+		};
+		19B9CDC5235DE8CA0088ABEF /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				195AD688235A0A5F0018185B /* MapVC.swift */,
+				195AD689235A0A5F0018185B /* MapVC.xib */,
+				198E51D8235A4FD900B2199C /* PoiAnnotation.swift */,
+				198E51DA235A54BA00B2199C /* PoiAnnotationView.swift */,
+			);
+			path = MapVC;
+			sourceTree = "<group>";
+		};
+		19B9CDC6235DF2A50088ABEF /* Pois */ = {
+			isa = PBXGroup;
+			children = (
+				19B9CDC7235DF2BD0088ABEF /* PoisStoryboard.storyboard */,
+				19B9CDCB235DF3020088ABEF /* PoisInfoContainerVC.swift */,
+				193C698A235DF3730009D013 /* PoiInfoTableVC.swift */,
+			);
+			path = Pois;
 			sourceTree = "<group>";
 		};
 		19BBC34D234F8A7F00FDF0D7 /* Missions */ = {
@@ -450,6 +475,7 @@
 				19B13D3023141A1E00FAC645 /* Resources */,
 				1975204A235202CC00612600 /* Crashlytics Run Script */,
 				192A9040235DBFFB00E3977B /* TODO,FIX Warnings */,
+				1B706E6C77D812F3F226176C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,6 +544,7 @@
 				19BBC34F234F8A9A00FDF0D7 /* MissionsStoryboard.storyboard in Resources */,
 				191BAABA23293F4C004D47A2 /* OnboardPage.xib in Resources */,
 				19B13D3D23141A2400FAC645 /* Assets.xcassets in Resources */,
+				19B9CDC8235DF2BD0088ABEF /* PoisStoryboard.storyboard in Resources */,
 				19DC1AD4234111BC00F87ACB /* SectionCategoryHeader.xib in Resources */,
 				19DC1AD62341122200F87ACB /* Poppins-Bold.otf in Resources */,
 				19B13D3B23141A1F00FAC645 /* Onboarding.storyboard in Resources */,
@@ -564,6 +591,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
+		1B706E6C77D812F3F226176C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-awarewego/Pods-awarewego-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65DE4796777AA56C23DA2BA2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +649,7 @@
 				19D31C43232E3CAC008756C2 /* SwiftyOnboardPage.swift in Sources */,
 				19CF8AE92338D70700BA8450 /* LoadingViewController.swift in Sources */,
 				190EA656232E771800080D58 /* ForgotViewController.swift in Sources */,
+				193C698B235DF3730009D013 /* PoiInfoTableVC.swift in Sources */,
 				19D6CD95231665FA000B6DB4 /* WelcomeVC.swift in Sources */,
 				19BBC357234FCF2000FDF0D7 /* InsetLabel.swift in Sources */,
 				1956B4942342543D0098E32E /* CustomTabbarController.swift in Sources */,
@@ -613,6 +658,7 @@
 				1988878E2344B452008ECC59 /* MissionTableViewCell.swift in Sources */,
 				19DC1AD3234111BC00F87ACB /* SectionCategoryHeader.swift in Sources */,
 				1951B791232BB26200DDCA12 /* LoginViewController.swift in Sources */,
+				19B9CDCC235DF3020088ABEF /* PoisInfoContainerVC.swift in Sources */,
 				199008E823466A990015277E /* FiltersViewController.swift in Sources */,
 				19A2BB7E2341F41300669D00 /* FiltersDataModel.swift in Sources */,
 				198887962344F13C008ECC59 /* SearchResultCell.swift in Sources */,

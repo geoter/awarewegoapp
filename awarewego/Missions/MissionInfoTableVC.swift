@@ -97,7 +97,10 @@ extension MissionInfoTableVC: UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let storyboard = UIStoryboard(name: "PoisStoryboard", bundle: nil)
+          let detailVC = storyboard.instantiateViewController(withIdentifier: "PoisInfoContainerVC")
+          
+          self.present(detailVC, animated: true, completion: nil)
     }
 }
 

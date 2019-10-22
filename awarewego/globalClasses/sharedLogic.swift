@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+var globalNavigationController:UINavigationController? = {
+    let viewController = UIApplication.shared.windows.first!.rootViewController
+    return viewController as? UINavigationController
+}()
+
 // used in Bezier Login views
 public enum BezierResizingBehavior: Int {
     case aspectFit /// The content is proportionally resized to fit into the target rectangle.

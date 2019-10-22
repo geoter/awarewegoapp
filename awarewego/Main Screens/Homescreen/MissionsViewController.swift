@@ -118,7 +118,6 @@ extension MissionsViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let storyboard = UIStoryboard(name: "MissionsStoryboard", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MissionInfoVC")
          self.present(vc, animated: true, completion: nil)
